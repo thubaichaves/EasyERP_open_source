@@ -1,0 +1,17 @@
+<% oservCollection.forEach(function(oserv, index){ %>
+<tr data-id="<%=oserv._id%>">
+    <td class="editable employee" data-content="employee" data-type="employeeSelect">
+        <span title="Delete" class="icon-trash"></span>
+        <span><%=oserv.employee ? oserv.employee.name.first + ' ' + oserv.employee.name.last : ''%></span>
+    </td>
+    <td class="department">
+        <%=oserv.department ? oserv.department.name : ''%>
+    </td>
+    <% for (var i=0; i<=oserv.vacArray.length - 1; i++) { %>
+    <%=oserv.vacArray[i] ? '<td data-dayID="' + (i) + '" class="editable ' + oserv.vacArray[i] + ' selectedType" data-content="vacType">' + oserv.vacArray[i] + '<input type="text" readonly value="' + oserv.vacArray[i] + '"></td>' : '<td data-dayID="' + (i) + '" class="editable" data-content="vacType"><input type="text" readonly value=""></td>'%>
+    <% } %>
+    <td class="totalDays">
+        <%=oserv.countOservDays%>
+    </td>
+</tr>
+<% }) %>

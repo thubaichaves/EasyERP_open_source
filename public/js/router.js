@@ -102,6 +102,7 @@ define([
             'easyErp/purchaseDashboard'                                                                     : 'goToCustomPurchaseDashboard',
             'easyErp/payrollDashboard'                                                                      : 'goToPayrollDashboard',
             'easyErp/DashBoardVacation(/filter=:filter)'                                                    : 'dashBoardVacation',
+            'easyErp/DashBoardOserv(/filter=:filter)'                                                       : 'dashBoardOserv',
             'easyErp/invoiceCharts(/filter=:filter)'                                                        : 'invoiceCharts',
             'easyErp/HrDashboard'                                                                           : 'hrDashboard',
             'easyErp/projectDashboard'                                                                      : 'goToProjectDashboard',
@@ -299,6 +300,80 @@ define([
                     self.mainView.on('rendered', renderView);
                 } else {
                     self.mainView.updateMenu('DashBoardVacation');
+                    renderView();
+                }
+
+            }
+        },
+
+
+        dashBoardOserv: function (filter) {
+            var self = this;
+            var currentUser = App.currentUser || {};
+            var contentType = 'DashBoardOserv';
+            var _filter;
+
+            // FlurryAgent.logEvent('DashBoard Vacation', {filter: filter});
+
+            tracker.track({
+                date       : new Date(),
+                eventType  : 'userFlow',
+                name       : 'DashBoard Oserv',
+                message    : 'DashBoard Oserv',
+                email      : currentUser.email,
+                login      : currentUser.login,
+                mobilePhone: currentUser.mobilePhone
+            });
+
+            _filter = filter || custom.retriveFromCash('DashOserv.filter');
+
+            if (typeof _filter === 'string') {
+                _filter = decodeURIComponent(_filter);
+                _filter = JSON.parse(_filter);
+            }
+
+            if (!this.isAuth) {
+                this.checkLogin(function (success) {
+                    if (success) {
+                        self.isAuth = true;
+                        renderDash();
+                    } else {
+                        self.redirectTo();
+                    }
+                });
+            } else {
+                renderDash();
+            }
+
+            function renderDash() {
+                var startTime = new Date();
+                var contentViewUrl = 'views/oservDashboard/index';
+                var topBarViewUrl = 'views/oservDashboard/TopBarView';
+
+                function renderView() {
+                    return require([contentViewUrl, topBarViewUrl], function (contentView, TopBarView) {
+                        var contentview;
+                        var topbarView;
+
+                        custom.setCurrentVT('list');
+
+                        topbarView = new TopBarView();
+                        contentview = new contentView({
+                            startTime: startTime,
+                            filter   : filter
+                        });
+                        topbarView.bind('changeDateRange', contentview.changeDateRange, contentview);
+
+                        self.changeView(contentview);
+                        self.changeTopBarView(topbarView);
+                    });
+                }
+
+                if (self.mainView === null) {
+                    self.main('DashBoardOserv');
+                    self.mainView.on('rendered', renderView);
+                } else {
+                    self.mainView.updateMenu('DashBoardOserv');
                     renderView();
                 }
 

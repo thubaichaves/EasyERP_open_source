@@ -11,6 +11,7 @@ module.exports = function (app, mainDb) {
     var dbsObject = mainDb.dbsObject;
     var models = require('../helpers/models.js')(dbsObject);
     var productRouter = require('./product')(models, event);
+    //var oservRouter = require('./oserv')(models, event);
     var orderRouter = require('./order')(models, event);
     var ordersRouter = require('./orders')(models, event);
     var invoicesRouter = require('./invoices')(models, event);
@@ -47,6 +48,7 @@ module.exports = function (app, mainDb) {
     var modulesRouter = require('./modules')(models);
     var monthHoursRouter = require('./monthHours')(event, models);
     var vacationRouter = require('./vacation')(event, models);
+    var oservRouter = require('./oserv')(event, models);
     var bonusTypeRouter = require('./bonusType')(models, event);
     var dashboardRouter = require('./dashboard')(models);
     var expensesInvoiceRouter = require('./expensesInvoice')(models, event);
@@ -206,6 +208,7 @@ module.exports = function (app, mainDb) {
 
     app.use('/filter', filterRouter);
     app.use('/products', productRouter);
+    app.use('/oserv', oservRouter);
     app.use('/orders', orderRouter);
     app.use('/invoices', invoiceRouter);
     app.use('/invoice', invoicesRouter);

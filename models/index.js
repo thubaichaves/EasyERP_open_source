@@ -27,6 +27,7 @@ module.exports = (function () {
     require('./paymentTerm.js');
     require('./priority.js');
     require('./period.js');
+    require('./oserv.js');
     require('./product.js');
     require('./productCategory.js');
     require('./productsOptions.js');

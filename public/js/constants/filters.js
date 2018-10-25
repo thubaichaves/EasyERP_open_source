@@ -150,6 +150,35 @@
             array: ['name', 'department', 'projecttype', 'salesManager']
         },
 
+        DashOserv: {
+            dateFilterArray: [
+                'custom'
+            ],
+
+            name: {
+                displayName: 'Employee',
+                backend    : 'employee'
+            },
+
+            department: {
+                displayName: 'Department',
+                backend    : 'department._id'
+            },
+
+            projecttype: {
+                displayName: 'Project Type',
+                backend    : 'project.projecttype',
+                type       : 'string'
+            },
+
+            salesManager: {
+                displayName: 'Sales Manager',
+                backend    : 'salesManager.employeeId'
+            },
+
+            array: ['name', 'department', 'projecttype', 'salesManager']
+        },
+
         DealTasks: {
             name: {
                 displayName: 'Name',

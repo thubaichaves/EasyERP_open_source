@@ -179,6 +179,7 @@ define([
                     case CONTENT_TYPES.STOCKTRANSACTIONS:
                     case CONTENT_TYPES.HOLIDAY:
                     case CONTENT_TYPES.VACATION:
+                    case CONTENT_TYPES.OSERV:
                     case CONTENT_TYPES.CAPACITY:
                     case CONTENT_TYPES.JOBSDASHBOARD:
                     case CONTENT_TYPES.PAYROLLPAYMENTS:
@@ -274,6 +275,7 @@ define([
                     case CONTENT_TYPES.STOCKCORRECTIONS:
                     case CONTENT_TYPES.HOLIDAY:
                     case CONTENT_TYPES.VACATION:
+                    case CONTENT_TYPES.OSERV:
                     case CONTENT_TYPES.CAPACITY:
                     case CONTENT_TYPES.JOBSDASHBOARD:
                     case CONTENT_TYPES.PAYROLLPAYMENTS:
