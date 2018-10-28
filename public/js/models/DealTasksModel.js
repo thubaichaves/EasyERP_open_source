@@ -43,7 +43,7 @@ define([
         validate: function (attrs) {
             var errors = [];
 
-            Validation.checkGroupsNameField(errors, true, attrs.assignedTo._id || attrs.assignedTo, 'AssignedTo');
+            //Validation.checkGroupsNameField(errors, true, attrs.assignedTo._id || attrs.assignedTo, 'AssignedTo');
             Validation.checkDateField(errors, true, attrs.dueDate, 'Due Date');
 
             if (errors.length > 0) {

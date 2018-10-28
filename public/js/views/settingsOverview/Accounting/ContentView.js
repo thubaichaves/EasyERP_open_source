@@ -10,6 +10,7 @@ define([
     'collections/accountsCategories/filterCollection',
     'collections/rates/filterCollection',
     'collections/taxSettings/filterCollection',
+    'collections/tasSettings/filterCollection',
     'collections/expensesCategories/filterCollection',
     'views/settingsOverview/Accounting/paymentMethod/paymentMethodView',
     'views/settingsOverview/Accounting/paymentTerms/paymentTermsView',
@@ -17,11 +18,13 @@ define([
     'views/settingsOverview/Accounting/accountsCategories/accCategoryView',
     'views/settingsOverview/Accounting/rates/indexView',
     'views/settingsOverview/Accounting/taxes/TaxListView',
+    'views/settingsOverview/Accounting/tasex/TasListView',
     'views/settingsOverview/Accounting/expensesCategories/expensesCategoryView',
     'views/settingsOverview/Accounting/defaults/ContentView',
     'async',
     'dataService'
-], function (Backbone, $, _, Parent, DashboardTemplate, PayMethodsCollection, CurrencyCollection, PaymentTermsCollection, AccountsCategoriesCollection, RatesCollection, TaxCollection, ExpensesCategoryCollection, PaymentMethodView, PaymentTermsView, CurrencyView, AccCategoryView, RatesView, TaxView, ExpensesCategoryView, DefaultsView, async, dataService) {
+], function (Backbone, $, _, Parent, DashboardTemplate, PayMethodsCollection, CurrencyCollection, PaymentTermsCollection, AccountsCategoriesCollection, RatesCollection, TaxCollection, TasCollection, ExpensesCategoryCollection, PaymentMethodView, PaymentTermsView, CurrencyView, AccCategoryView, RatesView, TaxView, TasView, ExpensesCategoryView, DefaultsView, async, dataService) {
+
     'use strict';
 
     var ContentView = Parent.extend({
@@ -43,6 +46,7 @@ define([
             this.expensesCategoriesCollection = new ExpensesCategoryCollection();
             this.ratesCollection = new RatesCollection();
             this.taxCollection = new TaxCollection();
+            this.tasCollection = new TasCollection();
 
             this.currencyCollection.bind('reset', this.renderCurrencies, this);
             this.payMethodsCollection.bind('reset', this.renderPaymentMethods, this);
@@ -51,6 +55,7 @@ define([
             this.expensesCategoriesCollection.bind('reset', this.renderExpensesCategories, this);
             this.ratesCollection.bind('reset', this.renderRates, this);
             this.taxCollection.bind('reset', this.renderTaxes, this);
+            this.tasCollection.bind('reset', this.renderTasex, this);
 
             dataService.getData('/organizationSettings', {}, function (data) {
 
@@ -75,6 +80,12 @@ define([
         renderTaxes: function () {
             new TaxView({
                 collection: this.taxCollection
+            }).render();
+        },
+
+        renderTasex: function () {
+            new TasView({
+                collection: this.tasCollection
             }).render();
         },
 

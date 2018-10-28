@@ -103,6 +103,7 @@ module.exports = function (app, mainDb) {
     var stockInventoryRouter = require('./stockInventory')(models, event);
     var channelRouter = require('./channel')(models, event);
     var taxSettingsRouter = require('./taxSettings')(models, event);
+    var tasSettingsRouter = require('./tasSettings')(models, event);
     var reportsRouter = require('./reports')(models, event);
     var imagesRouter = require('./images')(models, event);
     var stockReturnsRouter = require('./stockReturns')(models, event);
@@ -294,6 +295,7 @@ module.exports = function (app, mainDb) {
     app.use('/purchaseInvoices', purchaseInvoicesRouter);
     app.use('/channels', channelRouter);
     app.use('/taxSettings', taxSettingsRouter);
+    app.use('/tasSettings', tasSettingsRouter);
     app.use('/rates', ratesRouter);
     app.use('/reports', reportsRouter);
     app.use('/shippingMethod', shippingMethodRouter);

@@ -4892,8 +4892,10 @@ template, [hidden] {
       min-height: 26px; }
     .forSCU.list td.subtotal div, .forSCU.list td[data-name="productName"] div {
       background-color: transparent !important; }
-    .forSCU.list td.subtotal span.sum, .forSCU.list td[data-name="taxes"] span.sum {
-      white-space: initial; }
+.forSCU.list td.subtotal span.sum, .forSCU.list td[data-name="taxes"] span.sum {
+  white-space: initial; }
+.forSCU.list td.subtotal span.sum, .forSCU.list td[data-name="tasex"] span.sum {
+  white-space: initial; }
   .forSCU.list tbody tr.productItem.green, .forSCU.list tbody td.scuItemHolder.green {
     background-color: #ccffcc; }
     .forSCU.list tbody tr.productItem.green td.subtotal, .forSCU.list tbody td.scuItemHolder.green td.subtotal {
@@ -16200,11 +16202,22 @@ a.listContentWrap.invoiceList.projectClosed .compactRowWrap {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  ._taxRateSelect ._persentItem {
-    margin: 0 5px;
-    font-family: "OpenSans SemiBold", Arial, Helvetica, sans-serif; }
+  -ms-flex-align: center;
+  align-items: center; }
+._taxRateSelect ._persentItem {
+  margin: 0 5px;
+  font-family: "OpenSans SemiBold", Arial, Helvetica, sans-serif; }
+
+._tasRateSelect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+._tasRateSelect ._persentItem {
+  margin: 0 5px;
+  font-family: "OpenSans SemiBold", Arial, Helvetica, sans-serif; }
 
 ._trialBalanceTableWrap .list:not(.stripedList):not(._dialogTable) tbody td {
   height: 23px; }
@@ -16718,10 +16731,20 @@ td.editable {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  ._taxList > li {
-    line-height: 24px; }
+  -ms-flex-direction: column;
+  flex-direction: column; }
+._taxList > li {
+  line-height: 24px; }
+._tasList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+._tasList > li {
+  line-height: 24px; }
 
 ._formTable {
   table-layout: fixed; }
@@ -22061,9 +22084,23 @@ td.invalidValue {
   padding: 0 4px;
   border: 1px solid #c8c8d3;
   height: 24px; }
-  ._taxBoxWrp .check_wrap > a.current-selected {
-    line-height: 22px; }
+._taxBoxWrp .check_wrap > a.current-selected {
+  line-height: 22px; }
 ._taxBoxWrp ._taxCommentWrp {
+  color: rgba(121, 121, 121, 0.62); }
+
+/*07.11.16*/
+._tasBoxWrp input:not(.checkbox), ._tasBoxWrp .check_wrap {
+  width: 90%; }
+._tasBoxWrp .half-block, ._tasBoxWrp .ui-dialog .app-block, .ui-dialog ._tasBoxWrp .app-block {
+  width: 45%; }
+._tasBoxWrp .check_wrap {
+  padding: 0 4px;
+  border: 1px solid #c8c8d3;
+  height: 24px; }
+._tasBoxWrp .check_wrap > a.current-selected {
+  line-height: 22px; }
+._tasBoxWrp ._tasCommentWrp {
   color: rgba(121, 121, 121, 0.62); }
 
 /*18.11.2016*/

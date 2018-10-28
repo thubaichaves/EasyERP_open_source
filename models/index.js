@@ -90,6 +90,7 @@ module.exports = (function () {
     require('./integrations.js');
     require('./matchMagento.js');
     require('./taxSettings.js');
+    require('./tasSettings.js');
     require('./channelLinks.js');
     require('./rates.js');
     require('./shippingMethod.js');

@@ -71,6 +71,7 @@ module.exports = {
     PURCHASEORDERS      : 129,
     PURCHASEINVOICES    : 130,
     TAX                 : 135,
+    TAS                 : 203,
     SERRINGSOVERVIEW    : 136,
     REPORTS             : 141,
     INVENTORYREPORTS    : 146,
