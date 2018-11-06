@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/dialogViewBase',
     'models/ratesModel',
-    'text!templates/settingsOverview/Accounting/rates/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/rates/CreateTemplate.html',
     'moment',
     'populate',
     'helpers/keyValidator'

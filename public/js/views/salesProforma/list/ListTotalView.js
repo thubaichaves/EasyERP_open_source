@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/salesProforma/list/ListTotal.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salesProforma/list/ListTotal.html',
     'helpers'
 ], function (Backbone, $, _, listTemplate, helper) {
     var OrderListTotalView = Backbone.View.extend({

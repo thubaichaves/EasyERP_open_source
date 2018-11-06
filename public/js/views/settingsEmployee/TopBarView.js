@@ -1,7 +1,7 @@
 define([
     'views/topBarViewBase',
     'Underscore',
-    'text!templates/settingsEmployee/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsEmployee/TopBarTemplate.html',
     'constants'
 ], function (BaseView, _, ContentTopBarTemplate, CONSTANTS) {
     var TopBarView = BaseView.extend({

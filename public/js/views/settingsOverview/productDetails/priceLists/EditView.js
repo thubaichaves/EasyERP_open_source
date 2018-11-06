@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/productDetails/priceLists/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/priceLists/EditTemplate.html',
     'views/selectView/selectView',
     'populate',
     'constants',

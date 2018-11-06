@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Accounting/AccountingTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/AccountingTemplate.html',
     'async',
     'dataService',
     'collections/paymentMethod/paymentMethods',

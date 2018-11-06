@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Tags/tagTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Tags/tagTemplate.html',
     'views/Tags/TagListView'
 
 ], function (Backbone, $, _, tagTemplate, TagListView) {

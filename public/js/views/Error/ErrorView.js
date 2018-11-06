@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Error/ErrorPageTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Error/ErrorPageTemplate.html'
 ], function (Backbone, _, ErrorPageTemplate) {
     'use strict';
 

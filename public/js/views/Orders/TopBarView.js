@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/Orders/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Orders/TopBarTemplate.html',
     'constants'
 ], function (_, BaseView, ContentTopBarTemplate, CONSTANTS) {
     'use strict';

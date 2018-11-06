@@ -2,7 +2,7 @@ define([
     'Underscore',
     'views/topBarViewBase',
     'jQuery',
-    'text!templates/ProductCategory/TopBarTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ProductCategory/TopBarTemplate.html'
 ], function (_, BaseView, $, TopBarTemplate) {
     var TopBarView = BaseView.extend({
         el         : '#top-bar',

@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/profitAndLoss/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/profitAndLoss/list/ListHeader.html',
     'views/profitAndLoss/list/ListItemView',
     'views/Filter/filterView',
     'views/journalEntry/ViewSource',

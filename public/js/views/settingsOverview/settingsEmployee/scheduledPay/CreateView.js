@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/settingsOverview/settingsEmployee/scheduledPay/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/scheduledPay/CreateTemplate.html',
     'models/ScheduledPayModel',
     'helpers/ga'
 ], function ($, _, Backbone, CreateTemplate, ScheduledPayModel, ga) {

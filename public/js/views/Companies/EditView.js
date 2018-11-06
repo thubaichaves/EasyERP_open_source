@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/Companies/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Companies/EditTemplate.html',
     'views/CustomersSuppliers/salesPurchases',
     'common',
     'constants'

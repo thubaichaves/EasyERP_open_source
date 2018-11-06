@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/main/MainTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/main/MainTemplate.html',
     'models/EmployeesModel',
     'models/UsersModel',
     'views/menu/LeftMenuView',

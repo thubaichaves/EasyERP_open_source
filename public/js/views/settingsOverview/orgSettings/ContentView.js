@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/orgSettings/orgSettingsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/orgSettings/orgSettingsTemplate.html',
     'models/orgSettings',
     'views/selectView/selectView',
     'dataService',

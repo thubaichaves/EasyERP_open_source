@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/ChartOfAccount/list/ListTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ChartOfAccount/list/ListTemplate.html'
 ], function (Backbone, _, listTemplate) {
     var ListItemView = Backbone.View.extend({
         el: '#listTable',

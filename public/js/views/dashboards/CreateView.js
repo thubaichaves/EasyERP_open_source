@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/dashboards/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/CreateTemplate.html',
     'views/dialogViewBase',
     'models/CustomDashboardModel',
     'constants'

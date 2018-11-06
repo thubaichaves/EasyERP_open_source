@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/purchaseInvoices/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/purchaseInvoices/list/ListTemplate.html',
     'helpers',
     'moment'
 ], function (Backbone, _, listTemplate, helpers) {

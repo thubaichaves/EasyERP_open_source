@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/refund/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/refund/CreateTemplate.html',
     'models/PaymentModel',
     'helpers/keyValidator',
     'helpers',

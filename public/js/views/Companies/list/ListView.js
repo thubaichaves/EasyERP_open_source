@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/Companies/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Companies/list/ListHeader.html',
     'views/Companies/CreateView',
     'views/Companies/list/ListItemView',
     'collections/Companies/filterCollection',

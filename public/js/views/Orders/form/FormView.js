@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Orders/form/FormTemplate.html',
-    'text!templates/Orders/temps/documentTemp.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Orders/form/FormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Orders/temps/documentTemp.html',
     'views/dialogViewBase',
     'views/Projects/projectInfo/proformas/proformaView',
     'views/Products/InvoiceOrder/ProductItems',
@@ -102,7 +102,7 @@ define([
                 });
             });
         },
-        
+
         receiveInvoice: function (e) {
             var self = this;
             var url = '/invoices/receive';

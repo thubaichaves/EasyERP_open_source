@@ -1,9 +1,9 @@
 define([
-        'text!templates/Pagination/PaginationTemplate.html',
-        'text!templates/Persons/list/ListHeader.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Pagination/PaginationTemplate.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Persons/list/ListHeader.html',
         'views/Persons/CreateView',
         'views/Persons/list/ListItemView',
-        'text!templates/Alpabet/AphabeticTemplate.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Alpabet/AphabeticTemplate.html',
         'collections/Persons/filterCollection',
         'views/Filter/filterView',
         'common',

@@ -2,7 +2,7 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/salesInvoices/wTrack/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salesInvoices/wTrack/CreateTemplate.html',
     'models/InvoiceModel',
     'common',
     'populate',

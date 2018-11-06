@@ -3,7 +3,7 @@
     'Underscore',
     'jQuery',
     'views/dialogViewBase',
-    'text!templates/Tasks/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Tasks/EditTemplate.html',
     'views/selectView/selectView',
     'views/Notes/NoteView',
     'views/Notes/AttachView',

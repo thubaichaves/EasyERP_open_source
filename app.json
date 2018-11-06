@@ -1,14 +1,13 @@
 {
   "name": "novo",
   "script": "server.js",
-  "node_args": ['--debug=55555'],
   "instances"  : 0,
   "exec_mode"  : "cluster",
   "env": {
-    "NODE_ENV": "development",
+    "NODE_ENV": "production"
   },
   "env_production" : {
-    "NODE_ENV": "development"
+    "NODE_ENV": "production"
   },
   "watch"       : true
 }

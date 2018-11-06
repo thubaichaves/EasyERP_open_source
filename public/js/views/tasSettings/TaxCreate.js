@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/selectView/selectView',
-    'text!templates/tasSettings/TasCreate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/tasSettings/TasCreate.html',
     'models/tasModel',
     'populate',
     'helpers/keyValidator'

@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Pagination/PaginationTemplate.html',
-    'text!templates/Notes/importTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Pagination/PaginationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Notes/importTemplate.html',
     'views/pagination',
     'views/selectView/selectView',
     'views/Notes/AttachView',
@@ -12,7 +12,7 @@ define([
     'constants',
     'helpers',
     'constants/guideTours',
-    'text!templates/guideTours/notificationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/guideTours/notificationTemplate.html',
     'views/guideTours/guideNotificationView'
 ], function (Backbone, $, _, paginationTemplate, importForm, Pagination, SelectView, AttachView, common, dataService, CONSTANTS, helpers, GUIDES, notifyTemplate, GuideNotify) {
     'use strict';

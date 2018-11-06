@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/JobPositions/list/ListTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/JobPositions/list/ListTemplate.html'
 ], function (Backbone, _, ListTemplate) {
     'use strict';
 

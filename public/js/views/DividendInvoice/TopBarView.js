@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/DividendInvoice/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendInvoice/TopBarTemplate.html',
     'constants'
 ], function (_, BaseView, ContentTopBarTemplate, CONSTANTS) {
     var TopBarView = BaseView.extend({

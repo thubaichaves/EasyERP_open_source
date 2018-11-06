@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/stockInventory/topBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stockInventory/topBarTemplate.html',
     'constants'
 ], function (_, BaseView, ContentTopBarTemplate, CONSTANTS) {
     'use strict';

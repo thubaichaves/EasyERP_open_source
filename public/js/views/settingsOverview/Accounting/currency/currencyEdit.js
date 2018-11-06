@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/currency/EditCurrency.html',
-    'text!templates/settingsOverview/Accounting/currency/currencyEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/currency/EditCurrency.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/currency/currencyEl.html',
     'populate',
     'constants',
     'helpers/keyValidator'

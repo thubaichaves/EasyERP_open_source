@@ -5,7 +5,7 @@ define([
     'views/dialogViewBase',
     'views/journal/CreateView',
     'views/selectView/selectView',
-    'text!templates/manualEntry/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/manualEntry/CreateTemplate.html',
     'models/journalEntry',
     'helpers/keyCodeHelper',
     'populate',

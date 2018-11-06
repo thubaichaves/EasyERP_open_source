@@ -2,7 +2,7 @@
 define([
         'Backbone',
         'Underscore',
-        'text!templates/Departments/form/FormTemplate.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Departments/form/FormTemplate.html',
         'views/Departments/EditView'
     ],
 

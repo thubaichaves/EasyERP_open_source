@@ -7,7 +7,7 @@ define([
     'views/reports/EditView',
     'dataService',
     'moment',
-    'text!templates/reports/MainTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reports/MainTemplate.html',
     'constants/customReports',
     'services/productCategories'
 ], function (Backbone, $, _, Parent, CreateView, EditView, dataService, moment, mainTemplate, constants, productCategoriesService) {

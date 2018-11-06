@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/Accounting/rates/RatesList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/rates/RatesList.html',
     'views/Accounting/rates/EditView',
     'dataService'
 ], function (Backbone, _, $, PaymentMethodList, EditView, dataService) {

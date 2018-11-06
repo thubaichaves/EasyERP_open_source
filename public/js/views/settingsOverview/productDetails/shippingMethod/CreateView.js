@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/productDetails/shippingMethod/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/shippingMethod/CreateTemplate.html',
     'models/ShippingMethodModel',
     'populate',
     'constants',

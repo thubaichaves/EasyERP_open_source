@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Departments/list/ListTemplate.html',
-    'text!templates/Departments/form/FormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Departments/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Departments/form/FormTemplate.html',
     'custom',
     'views/Departments/EditView',
     'views/Departments/CreateView'

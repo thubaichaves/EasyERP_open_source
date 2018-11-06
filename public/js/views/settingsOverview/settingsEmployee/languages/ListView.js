@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/settingsOverview/settingsEmployee/languages/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/languages/ListTemplate.html',
     'views/settingsOverview/settingsEmployee/languages/EditView',
     'views/settingsOverview/settingsEmployee/languages/CreateView',
     'helpers/ga',

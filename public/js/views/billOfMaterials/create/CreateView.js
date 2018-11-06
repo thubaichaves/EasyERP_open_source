@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/billOfMaterials/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/billOfMaterials/CreateTemplate.html',
     '../../dialogViewBase',
     'views/billOfMaterials/create/ComponentItemView',
     'models/billOfMaterials',

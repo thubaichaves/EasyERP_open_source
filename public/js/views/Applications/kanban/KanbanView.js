@@ -2,8 +2,8 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Applications/kanban/WorkflowsTemplate.html',
-    'text!templates/Applications/kanbanSettings.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Applications/kanban/WorkflowsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Applications/kanbanSettings.html',
     /* 'collections/Workflows/WorkflowsCollection',*/
     'views/Applications/kanban/KanbanItemView',
     'views/Applications/EditView',

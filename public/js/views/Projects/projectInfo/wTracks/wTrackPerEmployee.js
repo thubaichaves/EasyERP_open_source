@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Projects/projectInfo/wTracks/wTrackPerEmployee.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/wTracks/wTrackPerEmployee.html'
 
 ], function (Backbone, _, template) {
     var View = Backbone.View.extend({

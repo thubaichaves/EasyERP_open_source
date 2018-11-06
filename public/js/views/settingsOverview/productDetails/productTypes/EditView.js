@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/productDetails/productTypes/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/productTypes/EditTemplate.html',
     'populate',
     'constants',
     'helpers/keyValidator',

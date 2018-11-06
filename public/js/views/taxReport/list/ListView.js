@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/taxReport/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/taxReport/list/ListHeader.html',
     'views/taxReport/list/ListItemView',
     'collections/taxReport/filterCollection',
     'views/journalEntry/ViewSource',

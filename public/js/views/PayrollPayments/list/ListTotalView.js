@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/PayrollPayments/list/ListTotal.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/PayrollPayments/list/ListTotal.html',
     'helpers'
 ], function (Backbone, $, _, listTemplate, helpers) {
     var ListTotalView = Backbone.View.extend({

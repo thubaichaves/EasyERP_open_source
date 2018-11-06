@@ -3,7 +3,7 @@ define([
     'Underscore',
     'views/listViewBase',
     'views/PayrollExpenses/generate/GenerateView',
-    'text!templates/closeMonth/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/closeMonth/list/ListHeader.html',
     'views/closeMonth/list/ListItemView',
     'views/Filter/filterView',
     'collections/closeMonth/filterCollection',

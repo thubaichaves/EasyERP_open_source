@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/Workflows/list/ListItemTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Workflows/list/ListItemTemplate.html'
 ], function (Backbone, _, ListItemTemplate) {
     'use strict';
     var ListItemView = Backbone.View.extend({

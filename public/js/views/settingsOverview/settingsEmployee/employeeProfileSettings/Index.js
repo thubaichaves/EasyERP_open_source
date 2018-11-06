@@ -3,7 +3,7 @@ define([
     'Underscore',
     'Backbone',
     'models/EmployeeProfileSettings',
-    'text!templates/settingsOverview/settingsEmployee/employeeProfileSettings/index.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/employeeProfileSettings/index.html',
     'views/selectView/selectView',
     'services/select',
     'populate'

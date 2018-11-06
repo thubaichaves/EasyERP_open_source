@@ -3,7 +3,7 @@ define([
     'Underscore',
     'Backbone',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/productDetails/warehouse/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/warehouse/CreateTemplate.html',
     'models/warehouse',
     'constants',
     'populate',

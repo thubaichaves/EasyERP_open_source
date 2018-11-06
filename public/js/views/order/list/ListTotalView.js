@@ -2,8 +2,8 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/order/list/ListTotal.html',
-    'text!templates/invoice/list/ListTotal.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/order/list/ListTotal.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/invoice/list/ListTotal.html',
     'helpers'
 ], function (Backbone, _, $, listTemplate, invoiceTotal, helpers) {
     'use strict';

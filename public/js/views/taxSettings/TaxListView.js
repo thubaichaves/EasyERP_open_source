@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/taxSettings/TaxListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/taxSettings/TaxListTemplate.html',
     'views/taxSettings/TaxEdit',
     'views/taxSettings/TaxCreate'
 

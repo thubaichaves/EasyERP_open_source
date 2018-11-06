@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/tasex/TasEdit.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/tasex/TasEdit.html',
     'models/tasModel',
     'populate',
     'helpers/keyValidator'

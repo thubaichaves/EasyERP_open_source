@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Accounting/rates/EditTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/rates/EditTemplate.html'
 ], function (Backbone, $, _, EditTemplate) {
     'use strict';
 

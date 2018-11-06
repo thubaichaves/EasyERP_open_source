@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/expensesCategories/CreateTemplate.html',
-    'text!templates/settingsOverview/Accounting/expensesCategories/elementTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/expensesCategories/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/expensesCategories/elementTemplate.html',
     'models/expensesCategory',
     'populate',
     'services/select'

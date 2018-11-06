@@ -3,9 +3,9 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/goodsOutNotes/PackNote.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/goodsOutNotes/PackNote.html',
     'views/selectView/selectView',
-    'text!templates/Accounting/currencyEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/currencyEl.html',
     'populate',
     'helpers'
 ], function (Backbone, $, _, ParentView, EditTemplate, SelectView, tableEL, populate, helpers) {

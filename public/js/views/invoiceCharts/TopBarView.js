@@ -3,7 +3,7 @@ define([
     'Underscore',
     'jQuery',
     'views/Filter/dateFilter',
-    'text!templates/invoiceCharts/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/invoiceCharts/TopBarTemplate.html',
     'moment',
     'custom'
 ], function (Backbone, _, $, DateFilterView, ContentTopBarTemplate, moment, custom) {

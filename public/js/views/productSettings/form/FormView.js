@@ -5,7 +5,7 @@ define([
     'models/OptionsValuesModel',
     'collections/productSettings/optionValuesCollection',
     'collections/productType/filterCollection',
-    'text!templates/productSettings/form/FormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/productSettings/form/FormTemplate.html',
     'constants',
     'dataService',
     'views/selectView/selectView',

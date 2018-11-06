@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/cashTransfer/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/cashTransfer/list/ListTemplate.html',
     'helpers',
     'common'
 ], function (Backbone, _, cashTransferTemplate, helpers, common) {

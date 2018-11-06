@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/scheduledPay/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/scheduledPay/CreateTemplate.html',
     'models/ScheduledPayModel'
 ], function ($, _, Backbone, CreateTemplate, ScheduledPayModel) {
 

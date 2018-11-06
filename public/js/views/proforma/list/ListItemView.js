@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/Proforma/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Proforma/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, listTemplate, helpers) {
     'use strict';

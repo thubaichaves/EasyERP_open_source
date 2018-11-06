@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/monthHours/list/listHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/monthHours/list/listHeader.html',
     'views/monthHours/CreateView',
     'views/monthHours/list/ListItemView',
     'models/MonthHoursModel',
@@ -14,7 +14,7 @@ define([
     'populate',
     'async',
     'constants',
-    'text!templates/monthHours/list/cancelEdit.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/monthHours/list/cancelEdit.html',
     'helpers',
     'helpers/keyCodeHelper'
 ], function (Backbone, $, _, listViewBase, listTemplate, CreateView, ListItemView, CurrentModel, contentCollection, EditCollection, common, dataService, populate, async, CONSTANTS, cancelEdit, helpers, keyCodes) {

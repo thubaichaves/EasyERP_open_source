@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/Quotations/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Quotations/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, listTemplate, helpers) {
     var QuotationListItemView = Backbone.View.extend({

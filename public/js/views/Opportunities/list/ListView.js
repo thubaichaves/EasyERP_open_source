@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/Opportunities/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Opportunities/list/ListHeader.html',
     'views/Opportunities/CreateView',
     'views/Opportunities/list/ListItemView',
     'views/Opportunities/EditView',
@@ -11,7 +11,7 @@ define([
     'collections/Opportunities/filterCollection',
     'common',
     'dataService',
-    'text!templates/stages.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stages.html'
 ], function (Backbone,
              $,
              _,

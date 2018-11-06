@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/dashboards/customDashboard/ContentTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/customDashboard/ContentTemplate.html',
     'views/dashboards/tools/ContainerView',
     'constants',
     'constants/googleAnalytics',

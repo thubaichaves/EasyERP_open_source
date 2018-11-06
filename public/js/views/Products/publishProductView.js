@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Products/publishProduct.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/publishProduct.html',
     'views/selectView/selectView',
     'services/select',
     'dataService',

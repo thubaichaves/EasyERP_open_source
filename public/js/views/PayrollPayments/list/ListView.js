@@ -2,8 +2,8 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/Pagination/PaginationTemplate.html',
-    'text!templates/PayrollPayments/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Pagination/PaginationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/PayrollPayments/list/ListHeader.html',
     'views/Filter/filterView',
     'views/PayrollPayments/DialogView',
     'models/PaymentModel',
@@ -108,7 +108,7 @@ define([
                 if (!response.error) {
                     return new DialogView(response.success);
                 }
-                
+
                 App.render({
                     type   : 'error',
                     message: 'Something went wrong'

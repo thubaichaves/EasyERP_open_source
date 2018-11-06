@@ -4,7 +4,7 @@ define([
     'Underscore',
     'common',
     'custom',
-    'text!templates/Images/imagesTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Images/imagesTemplate.html',
     'dataService',
     'common',
     'async'

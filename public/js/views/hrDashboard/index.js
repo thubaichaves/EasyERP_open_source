@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/hrDashboard/index.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/hrDashboard/index.html',
     'collections/Dashboard/hrDashboard',
     'dataService',
     'constants',
@@ -519,7 +519,7 @@ define([
                     .text(function (d) {
                         return d.value;
                     });
-                
+
 
 
                 console.log(data);

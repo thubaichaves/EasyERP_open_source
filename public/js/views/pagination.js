@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/Filter/filterView',
     'views/confirmDialogBase',
-    'text!templates/Alpabet/AphabeticTemplate.html', // added alphabeticalRender
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Alpabet/AphabeticTemplate.html', // added alphabeticalRender
     'constants',
     'constants/filters',
     'common',

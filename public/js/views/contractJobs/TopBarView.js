@@ -3,7 +3,7 @@ define([
     'Underscore',
     'views/topBarViewBase',
     'views/Filter/dateFilter',
-    'text!templates/contractJobs/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/contractJobs/TopBarTemplate.html',
     'custom',
     'common',
     'moment'

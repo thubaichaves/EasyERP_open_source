@@ -2,7 +2,7 @@ define([
     'Underscore',
     'jQuery',
     'views/topBarViewBase',
-    'text!templates/tasSettings/TopBarTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/tasSettings/TopBarTemplate.html'
 ], function (_, $, BaseView, TopBarTemplate) {
     'use strict';
 

@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Degrees/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Degrees/CreateTemplate.html',
     'models/DegreeModel'
 ], function (Backbone, $, _, CreateTemplate, DegreeModel) {
     'use strict';

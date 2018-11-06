@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/reportsDashboard/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reportsDashboard/TopBarTemplate.html',
     'custom',
     'common'
 ], function ($, _, BaseView, TopBarTemplate, Custom, Common) {

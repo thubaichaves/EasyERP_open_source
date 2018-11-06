@@ -2,7 +2,7 @@ define([
     'Underscore',
     'jQuery',
     'views/listViewBase',
-    'text!templates/inventoryReport/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/inventoryReport/list/ListHeader.html',
     'views/inventoryReport/list/ListItemView',
     'collections/inventoryReport/filterCollection',
     'constants',

@@ -3,7 +3,7 @@ define([
     'Underscore',
     'jQuery',
     'models/ProductTypeModel',
-    'text!templates/productType/form/FormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/productType/form/FormTemplate.html',
     'constants',
     'dataService',
     'views/selectView/selectView',

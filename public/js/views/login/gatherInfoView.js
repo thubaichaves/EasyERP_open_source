@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/login/GatherInfoTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/login/GatherInfoTemplate.html',
     'dataService',
     'helpers/keyValidator'
 ], function (Backbone, _, $, GatherInfoTemplate, dataService, keyValidator) {

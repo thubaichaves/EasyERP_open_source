@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Products/form/PublishList/ListTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/form/PublishList/ListTemplate.html'
 ], function (Backbone, _, ListTemplate, populate) {
     'use strict';
 

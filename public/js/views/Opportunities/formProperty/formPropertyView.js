@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/Opportunities/CreateView',
     'models/OpportunitiesModel',
-    'text!templates/Opportunities/formProperty/formPropertyTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Opportunities/formProperty/formPropertyTemplate.html',
     'dataService',
     'helpers'
 ], function (Backbone, $, _, CreateView, PersonsModel, propertyTemplate, dataService, helpers) {

@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/oservDashboard/index.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/oservDashboard/index.html',
     'views/oservDashboard/statisticsView',
     'collections/Dashboard/oservDashboard',
     'views/wTrack/dashboard/oservDashEdit',

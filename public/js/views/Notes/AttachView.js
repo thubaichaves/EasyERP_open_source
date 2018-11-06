@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Notes/AttachTemplate.html',
-    'text!templates/Notes/AddAttachments.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Notes/AttachTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Notes/AddAttachments.html',
     'moment',
     'constants'
 ], function (Backbone, $, _, AttachTemplate, addAttachTemplate, moment, CONSTANTS) {

@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/dialogViewBase',
     'views/ChartOfAccount/CreateAccountTypeView',
-    'text!templates/ChartOfAccount/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ChartOfAccount/CreateTemplate.html',
     'models/chartOfAccount',
     'helpers/keyCodeHelper',
     'populate',

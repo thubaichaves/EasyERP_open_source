@@ -4,7 +4,7 @@ define([
     'Underscore',
     'models/CustomReportsModel',
     'views/listViewBase',
-    'text!templates/reports/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reports/list/ListHeader.html',
     'views/reports/list/ListItemView',
     'views/reports/EditView',
     'helpers/exportToPdf',

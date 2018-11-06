@@ -2,14 +2,14 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/closeMonth/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/closeMonth/TopBarTemplate.html',
     'custom',
     'common'
 ], function (Backbone, $, _, ContentTopBarTemplate, Custom, Common) {
     var TopBarView = Backbone.View.extend({
         el           : '#top-bar',
         contentType  : 'closeMonth',
-        contentHeader: 'Close Month',
+        contentHeader: 'Fechar Mês',
         actionType   : null, // Content, Edit, Create
         template     : _.template(ContentTopBarTemplate),
 

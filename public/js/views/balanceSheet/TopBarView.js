@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/balanceSheet/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/balanceSheet/TopBarTemplate.html',
     'custom',
     'constants',
     'common',
@@ -14,7 +14,7 @@ define([
     var TopBarView = Backbone.View.extend({
         el           : '#top-bar',
         contentType  : CONSTANTS.BALANCESHEET,
-        contentHeader: 'Balance Sheet',
+        contentHeader: 'Folha de Balanço',
         template     : _.template(ContentTopBarTemplate),
 
         initialize: function (options) {

@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/Applications/list/ListTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Applications/list/ListTemplate.html'
 ], function (Backbone, _, ApplicationsListTemplate) {
     'use strict';
     var ApplicationsListItemView = Backbone.View.extend({

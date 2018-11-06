@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/cashBook/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/cashBook/TopBarTemplate.html',
     'custom',
     'constants',
     'common',

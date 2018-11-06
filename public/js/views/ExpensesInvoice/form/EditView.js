@@ -3,7 +3,7 @@ define([
     'Underscore',
     'Backbone',
     'views/ExpensesInvoice/form/FormView',
-    'text!templates/ExpensesInvoice/form/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ExpensesInvoice/form/EditTemplate.html',
     'views/Editor/AttachView',
     'views/Products/orderRows/ProductItems',
     'views/Payment/CreateView',

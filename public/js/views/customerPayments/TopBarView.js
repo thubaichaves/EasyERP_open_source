@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/customerPayments/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/customerPayments/TopBarTemplate.html',
     'custom',
     'constants'
 ], function (_, BaseView, ContentTopBarTemplate, Custom, CONSTANTS) {

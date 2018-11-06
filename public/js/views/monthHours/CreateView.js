@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/monthHours/createTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/monthHours/createTemplate.html'
 
 ], function (Backbone, $, _, CreateTemplate) {
     'use strict';

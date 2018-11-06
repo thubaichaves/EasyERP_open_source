@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/weeklyScheduler/EditTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/weeklyScheduler/EditTemplate.html'
 ], function ($, _, Backbone, CreateTemplate) {
 
     var EditView = Backbone.View.extend({

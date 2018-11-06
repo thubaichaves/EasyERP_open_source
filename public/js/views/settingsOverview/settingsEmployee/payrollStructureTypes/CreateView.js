@@ -3,10 +3,10 @@ define([
     'Underscore',
     'Backbone',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/settingsEmployee/payrollStructureTypes/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/payrollStructureTypes/CreateTemplate.html',
     'models/PayrollStructureTypesModel',
     'views/settingsOverview/settingsEmployee/payrollStructureTypes/structureElement/CreateView',
-    'text!templates/settingsOverview/settingsEmployee/payrollStructureTypes/componentTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/payrollStructureTypes/componentTemplate.html',
     'populate',
     'dataService',
     'helpers/ga'

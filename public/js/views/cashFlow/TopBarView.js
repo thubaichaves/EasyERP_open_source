@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/cashFlow/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/cashFlow/TopBarTemplate.html',
     'custom',
     'constants',
     'common',
@@ -24,7 +24,7 @@ define([
 
             this.render();
         },
-        
+
         render: function () {
             var self = this;
             var dateRange;
@@ -55,7 +55,7 @@ define([
                 startDate  : this.startDate,
                 endDate    : this.endDate
             }));
-            
+
             this.dateFilterView = new DateFilterView({
                 contentType: 'cashFlow',
                 el         : this.$el.find('#dateFilter')

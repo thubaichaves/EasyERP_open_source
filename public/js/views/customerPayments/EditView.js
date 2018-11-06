@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Payment/temps/documentTemp.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Payment/temps/documentTemp.html',
     'views/refund/CreateView',
     'helpers'
 ], function (Backbone, $, _, EditTemplate, CreateRefundView, helpers) {

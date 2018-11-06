@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/Projects/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/CreateTemplate.html',
     'models/ProjectsModel',
     'views/Notes/AttachView',
     'views/Bonus/BonusView',

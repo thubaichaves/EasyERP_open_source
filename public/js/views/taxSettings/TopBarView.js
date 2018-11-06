@@ -2,14 +2,14 @@ define([
     'Underscore',
     'jQuery',
     'views/topBarViewBase',
-    'text!templates/taxSettings/TopBarTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/taxSettings/TopBarTemplate.html'
 ], function (_, $, BaseView, TopBarTemplate) {
     'use strict';
 
     var TopBarView = BaseView.extend({
         el           : '#top-bar',
         contentType  : 'taxSettings',
-        contentHeader: 'Taxes',
+        contentHeader: 'Impostos',
         actionType   : null, // Content, Edit, Create
         template     : _.template(TopBarTemplate),
 

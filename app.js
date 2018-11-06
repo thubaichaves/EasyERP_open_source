@@ -1,6 +1,7 @@
 module.exports = function (mainDb, dbsNames) {
     'use strict';
 
+
     var http = require('http');
     var path = require('path');
     var express = require('express');
@@ -56,12 +57,12 @@ module.exports = function (mainDb, dbsNames) {
     app.set('views', __dirname + '/views');
     global.appRoot = path.resolve(__dirname);
     // app.use(compression());
-    app.use(logger('dev'));
+    // todo: app.use(logger('dev')); //no echo
     app.use(bodyParser.json({
-        strict : false,
+        strict: false,
         inflate: true,
-        limit  : 1024 * 1024 * 200,
-        verify : function (req, res, buf) {
+        limit: 1024 * 1024 * 200,
+        verify: function (req, res, buf) {
             var shopHMAC = req.get('x-shopify-hmac-sha256');
 
             if (!shopHMAC) {
@@ -98,6 +99,10 @@ module.exports = function (mainDb, dbsNames) {
     app.set('io', io);
 
     require('./routes/index')(app, mainDb);
+
+
+
+    require('./modulos/contatos/load')(app, mainDb);
 
     return httpServer;
 };

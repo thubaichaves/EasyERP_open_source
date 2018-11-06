@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/workCenters/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/workCenters/EditTemplate.html',
     'views/dialogViewBase',
     'helpers/keyValidator'
 ], function (Backbone, $, _, EditTemplate, ParentView, keyValidator) {

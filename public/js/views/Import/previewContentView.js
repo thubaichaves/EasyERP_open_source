@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Import/PreviewTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Import/PreviewTemplate.html',
     'constants',
     'constants/mappingFields',
     'dataService'

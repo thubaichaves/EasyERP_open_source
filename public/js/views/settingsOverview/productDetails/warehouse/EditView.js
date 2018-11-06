@@ -3,10 +3,10 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/productDetails/warehouse/EditTemplate.html',
-    'text!templates/warehouse/CreateZoneTemplate.html',
-    'text!templates/warehouse/CreateLocationTemplate.html',
-    'text!templates/warehouse/zonesAndLocationsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/warehouse/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/CreateZoneTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/CreateLocationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/zonesAndLocationsTemplate.html',
     'views/settingsOverview/productDetails/warehouse/CreateView',
     'collections/warehouse/filterCollection',
     'models/warehouse',
@@ -412,7 +412,7 @@ define([
                     wait   : true,
                     success: function (model) {
                         self.hideDialog();
-                        
+
                         delete self.modelChanged[id];
 
                         if (self.modelChanged[id] && self.modelChanged[id].main) {

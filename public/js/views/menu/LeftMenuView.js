@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/menu/LeftMenuTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/menu/LeftMenuTemplate.html',
     'services/applyScrollBar',
     'views/documentationHelper/index'
 ], function (Backbone, _, $, LeftMenuTemplate, scrollBar, HelperView) {

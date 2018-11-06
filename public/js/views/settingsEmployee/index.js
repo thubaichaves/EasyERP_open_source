@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/settingsEmployee/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsEmployee/list/ListTemplate.html',
     'views/weeklyScheduler/list/ListView',
     'views/scheduledPay/list/ListView',
     'views/payrollComponentTypes/list/ListView',

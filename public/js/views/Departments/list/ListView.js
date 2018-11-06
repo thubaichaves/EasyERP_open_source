@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Departments/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Departments/list/ListHeader.html',
     'views/Departments/CreateView',
     'models/DepartmentsModel',
     'views/Departments/list/ListItemView',

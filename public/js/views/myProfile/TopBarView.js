@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/myProfile/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/myProfile/TopBarTemplate.html',
     'custom',
     'common'
 ], function (Backbone, $, _, TopBarTemplate, Custom, Common) {

@@ -3,7 +3,7 @@ define([
     'Underscore',
     'Backbone',
     'views/dialogViewBase',
-    'text!templates/WriteOff/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/WriteOff/EditTemplate.html',
     'views/Notes/NoteView',
     'views/Products/InvoiceOrder/ProductItems',
     'views/salesInvoices/wTrack/wTrackRows',

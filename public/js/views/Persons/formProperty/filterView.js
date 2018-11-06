@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Persons/formProperty/filterViewList.html',
-    'text!templates/Persons/formProperty/filterViewContent.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Persons/formProperty/filterViewList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Persons/formProperty/filterViewContent.html',
     'views/Persons/CreateView',
     'dataService',
     'collections/Filter/filterCollection'

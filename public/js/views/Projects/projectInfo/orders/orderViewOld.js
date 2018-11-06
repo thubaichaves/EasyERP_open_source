@@ -1,9 +1,9 @@
 define([
     'Underscore',
     'jQuery',
-    'text!templates/Projects/projectInfo/orders/ListTemplate.html',
-    'text!templates/Projects/projectInfo/orders/ListHeader.html',
-    'text!templates/Pagination/PaginationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/orders/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/orders/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Pagination/PaginationTemplate.html',
     'views/salesOrders/EditView',
     'views/salesOrders/list/ListView',
     'collections/Quotations/filterCollection',

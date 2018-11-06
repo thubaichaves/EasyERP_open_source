@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/selectView/selectView',
     'views/wTrack/list/createJob',
-    'text!templates/wTrack/dashboard/CreatewTrackTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/wTrack/dashboard/CreatewTrackTemplate.html',
     'models/wTrackModel',
     'moment',
     'async',

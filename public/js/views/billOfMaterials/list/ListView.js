@@ -3,7 +3,7 @@ define(['Backbone',
     'Underscore',
     'views/listViewBase',
     'models/billOfMaterials',
-    'text!templates/billOfMaterials/list/listHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/billOfMaterials/list/listHeader.html',
     'views/billOfMaterials/list/ListItemView',
     'constants',
     'dataService'

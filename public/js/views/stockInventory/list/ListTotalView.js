@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/stockInventory/list/ListTotal.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stockInventory/list/ListTotal.html',
     'helpers'
 ], function (Backbone, _, $, listTemplate, helpers) {
     'use strict';

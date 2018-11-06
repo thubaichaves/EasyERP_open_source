@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Attendance/monthTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Attendance/monthTemplate.html',
     'views/Attendance/StatisticsView',
     'moment'
 ], function (Backbone, _, ListTemplate, StatisticsView, moment) {

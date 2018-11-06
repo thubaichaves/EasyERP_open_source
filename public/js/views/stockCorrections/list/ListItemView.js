@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/stockCorrections/list/listTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stockCorrections/list/listTemplate.html'
 ], function (Backbone, _, listTemplate) {
     'use strict';
 

@@ -2,7 +2,7 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Birthdays/list/ListItemTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Birthdays/list/ListItemTemplate.html'
 ], function (Backbone, $, _, ListItemTemplate) {
     'use strict';
 

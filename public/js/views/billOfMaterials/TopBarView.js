@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/billOfMaterials/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/billOfMaterials/TopBarTemplate.html',
     'views/billOfMaterials/create/CreateView',
     'custom',
     'common',

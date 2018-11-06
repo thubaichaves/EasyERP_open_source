@@ -2,7 +2,7 @@
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/dashboards/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/list/ListTemplate.html',
     'moment'
 ], function (Backbone, _, $, ListTemplate, moment) {
     'use strict';

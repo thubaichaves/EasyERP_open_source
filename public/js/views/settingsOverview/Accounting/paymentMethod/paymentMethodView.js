@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/settingsOverview/Accounting/paymentMethod/PaymentMethodList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/paymentMethod/PaymentMethodList.html',
     'views/settingsOverview/Accounting/paymentMethod/paymentMethodEdit',
     'views/settingsOverview/Accounting/paymentMethod/paymentMethodCreate'
 ], function (Backbone, _, $, PaymentMethodList, RditView, CreateView) {
@@ -14,7 +14,7 @@ define([
         initialize: function (options) {
             this.startTime = options.startTime;
             this.collection = options.collection;
-            
+
             this.render();
         },
 

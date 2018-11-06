@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/dashboards/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/EditTemplate.html',
     'views/dialogViewBase',
     'models/CustomDashboardModel',
     'constants'
@@ -88,7 +88,7 @@ define([
                     self.$el.find('#rowNumList li[data-id="' + self.rowNumValue + '"]').addClass('active');
                 }
             }
-            
+
             generateGrid();
             setActive();
 

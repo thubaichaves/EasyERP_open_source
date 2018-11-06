@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Category/TagsListTemplate.html',
-    'text!templates/Category/TagsContentTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Category/TagsListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Category/TagsContentTemplate.html',
     'collections/Tags/TagsCollection',
     'views/Tags/createView',
     'views/Tags/editView'

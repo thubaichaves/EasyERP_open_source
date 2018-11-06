@@ -4,7 +4,7 @@ define([
     'backbone',
     'collections/Persons/PersonsCollection',
     'collections/Companies/CompaniesCollection',
-    'text!templates/Customers/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Customers/list/ListTemplate.html',
     'views/Persons/list/ListItemView',
     'views/Companies/list/ListItemView',
     'custom',

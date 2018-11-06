@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/balanceSheet/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/balanceSheet/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, $, _, listTemplate, helpers) {
     'use strict';

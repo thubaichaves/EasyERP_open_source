@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'collections/Filter/filterCollection',
-    'text!templates/Filter/filtersGroup.html',
-    'text!templates/Filter/filtersGroupElements.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Filter/filtersGroup.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Filter/filtersGroupElements.html',
     'constants'
 ], function (Backbone, $, _, FilterCollection, GroupTemplate,
              GroupElementsTemplate, CONSTANTS) {

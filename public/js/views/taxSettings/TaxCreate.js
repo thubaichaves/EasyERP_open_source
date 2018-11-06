@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/selectView/selectView',
-    'text!templates/taxSettings/TaxCreate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/taxSettings/TaxCreate.html',
     'models/taxModel',
     'populate',
     'helpers/keyValidator'

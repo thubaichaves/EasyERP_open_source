@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/cashBook/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/cashBook/list/ListTemplate.html',
     'helpers',
     'common'
 ], function (Backbone, $, _, listTemplate, helpers, common) {

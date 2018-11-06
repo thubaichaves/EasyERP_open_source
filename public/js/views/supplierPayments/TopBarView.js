@@ -1,6 +1,6 @@
 define([
     'Underscore',
-    'text!templates/supplierPayments/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/supplierPayments/TopBarTemplate.html',
     'views/topBarViewBase',
     'constants'
 ], function (_, ContentTopBarTemplate, BaseView, CONSTANTS) {

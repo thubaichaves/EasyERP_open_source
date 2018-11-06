@@ -2,7 +2,7 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/invoiceAging/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/invoiceAging/list/ListTemplate.html',
     'helpers',
     'async',
     'common'

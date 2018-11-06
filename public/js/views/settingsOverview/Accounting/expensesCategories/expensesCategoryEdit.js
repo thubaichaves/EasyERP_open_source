@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/expensesCategories/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/expensesCategories/EditTemplate.html',
     'populate',
     'services/select'
 ], function (Backbone, $, _, Parent, EditTemplate, populate, selectService) {

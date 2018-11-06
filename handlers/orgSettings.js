@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var async = require('async');
+var _ = require('underscore');
 
 var Module = function (models) {
     'use strict';
@@ -35,7 +36,7 @@ var Module = function (models) {
                 if (err) {
                     return next(err);
                 }
-
+                settings=   _.extend(settings,{lang:'ptbr'});
                 res.status(200).send({data: settings});
             });
     };

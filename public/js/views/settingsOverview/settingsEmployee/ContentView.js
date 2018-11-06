@@ -3,7 +3,7 @@ define([
     'Underscore',
     'Backbone',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/settingsEmployee/TabsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/TabsTemplate.html',
     'collections/weeklyScheduler/filterCollection',
     'collections/scheduledPay/filterCollection',
     'collections/nationalities/filterCollection',

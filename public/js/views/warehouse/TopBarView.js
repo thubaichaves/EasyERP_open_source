@@ -2,7 +2,7 @@ define([
     'Underscore',
     'jQuery',
     'views/topBarViewBase',
-    'text!templates/warehouse/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/TopBarTemplate.html',
     'constants'
 ], function (_, $, BaseView, TopBarTemplate, CONSTANTS) {
     'use strict';
@@ -10,7 +10,7 @@ define([
     var TopBarView = BaseView.extend({
         el           : '#top-bar',
         contentType  : CONSTANTS.WAREHOUSE,
-        contentHeader: 'Warehouse',
+        contentHeader: 'Estoque',
         actionType   : null, // Content, Edit, Create
         template     : _.template(TopBarTemplate),
 

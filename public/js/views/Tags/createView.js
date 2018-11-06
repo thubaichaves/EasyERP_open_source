@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Tags/CreateTag.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Tags/CreateTag.html',
     'views/selectView/selectView',
     'models/TagModel',
     'populate',

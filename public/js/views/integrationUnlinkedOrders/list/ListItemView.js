@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/integrationUnlinkedOrders/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/integrationUnlinkedOrders/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, listTemplate, helpers) {
     var unlinkedListItemView = Backbone.View.extend({

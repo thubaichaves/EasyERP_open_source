@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/Projects/list/ListTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/list/ListTemplate.html'
 ], function (Backbone, _, listTemplate) {
     var projectsListItemView = Backbone.View.extend({
         el: '#listTable',

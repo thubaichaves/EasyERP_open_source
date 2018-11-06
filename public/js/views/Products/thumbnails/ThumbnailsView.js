@@ -2,7 +2,7 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Products/thumbnails/ThumbnailsItemTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/thumbnails/ThumbnailsItemTemplate.html',
     'views/thumbnailsViewBase',
     'views/Products/EditView',
     'views/Products/CreateView',

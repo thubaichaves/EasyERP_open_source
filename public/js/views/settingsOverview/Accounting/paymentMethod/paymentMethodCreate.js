@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/paymentMethod/CreatePaymentMethods.html',
-    'text!templates/settingsOverview/Accounting/paymentMethod/paymentMethodEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/paymentMethod/CreatePaymentMethods.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/paymentMethod/paymentMethodEl.html',
     'models/paymentMethod',
     'populate',
     'constants'

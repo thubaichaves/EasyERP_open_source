@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/guideTours/notificationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/guideTours/notificationTemplate.html',
     'constants/guideTours'
 ], function (Backbone, $, _, notifyTemplate, GUIDES) {
     'use strict';

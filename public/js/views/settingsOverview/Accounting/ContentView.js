@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/AccountingTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/AccountingTemplate.html',
     'collections/paymentMethod/paymentMethods',
     'collections/currency/currencies',
     'collections/paymentTerms/paymentTerms',

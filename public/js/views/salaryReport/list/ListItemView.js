@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/salaryReport/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salaryReport/list/ListTemplate.html',
     'helpers',
     'moment'
 ], function (Backbone, $, _, listTemplate, helpers, moment) {

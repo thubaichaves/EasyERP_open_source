@@ -2,9 +2,9 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/NoteEditor/EditorTemplate.html',
-    'text!templates/NoteEditor/AddNote.html',
-    'text!templates/NoteEditor/timelineTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/NoteEditor/EditorTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/NoteEditor/AddNote.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/NoteEditor/timelineTemplate.html',
     'moment'
 ], function (Backbone, $, _, NoteTemplate, AddNote, timelineTemplate, moment) {
     'use strict';

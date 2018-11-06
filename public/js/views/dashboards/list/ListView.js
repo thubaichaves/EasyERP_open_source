@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/dashboards/list/listHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/list/listHeader.html',
     'views/dashboards/list/ListItemView',
     'views/dashboards/CreateView',
     'collections/dashboards/filterCollection',

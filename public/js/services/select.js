@@ -1,7 +1,7 @@
 define([
     'jQuery',
     'Underscore',
-    'text!templates/stages.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stages.html'
 ], function ($, _, stagesTamplate) {
     function showStageSelect(e) {
         var $targetEl = $(e.target);

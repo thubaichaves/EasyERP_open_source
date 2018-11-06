@@ -2,8 +2,8 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/reports/salesReports/InfoByChannelSalesTemplate.html',
-    'text!templates/reports/salesReports/SalesByChannelTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reports/salesReports/InfoByChannelSalesTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reports/salesReports/SalesByChannelTemplate.html',
     'views/Filter/dateFilter',
     'dataService',
     'moment',
@@ -238,7 +238,7 @@ define([
                     var colorAlp = 1; // ((d.frequency / (max + min)) + 0.45).toFixed(2);
                     return 'rgba(' + color + colorAlp + ')';
                 });
-            
+
             /*.on('mouseover', function (d) {
              var xPosition = this.x.baseVal.value + this.width.baseVal.value / 2 + 45;
              var yPosition = this.height.baseVal.value + 110;
@@ -288,7 +288,7 @@ define([
                     if (yPosition < 0) {
                         yPosition = 120;
                     }
-                    
+
                     d3.select(this)
                         .attr({
                             opacity: 0.5

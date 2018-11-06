@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/stockInventory/receiveTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stockInventory/receiveTemplate.html',
     'models/stockInventoryModel',
     'common',
     'populate',

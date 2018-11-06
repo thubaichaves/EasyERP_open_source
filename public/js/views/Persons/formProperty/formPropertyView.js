@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/Persons/formProperty/filterView',
     'models/PersonsModel',
-    'text!templates/Persons/formProperty/formPropertyTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Persons/formProperty/formPropertyTemplate.html'
 ], function (Backbone, $, _, FilterView, PersonsModel, propertyTemplate) {
     'use strict';
     var selectView = Backbone.View.extend({

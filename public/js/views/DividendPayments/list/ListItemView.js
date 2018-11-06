@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/DividendPayments/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendPayments/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, PaymentListTemplate, helpers) {
     var PaymentListItemView = Backbone.View.extend({

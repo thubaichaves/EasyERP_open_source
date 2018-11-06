@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/Attendance/index.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Attendance/index.html',
     'models/AttendanceModel',
     'views/Attendance/MonthView',
     'moment',

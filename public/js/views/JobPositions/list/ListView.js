@@ -3,14 +3,14 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/JobPositions/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/JobPositions/list/ListHeader.html',
     'views/JobPositions/CreateView',
     'views/JobPositions/list/ListItemView',
     'collections/JobPositions/filterCollection',
     'models/JobPositionsModel',
     'views/JobPositions/EditView',
     'common',
-    'text!templates/stages.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stages.html',
     'views/guideTours/guideNotificationView'
 ], function (Backbone, $, _, listViewBase, listTemplate, CreateView, ListItemView, contentCollection, CurrentModel, EditView, common, stagesTamplate, GuideNotify) {
     'use strict';

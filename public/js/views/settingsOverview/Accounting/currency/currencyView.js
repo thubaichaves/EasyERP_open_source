@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/settingsOverview/Accounting/currency/CurrencyList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/currency/CurrencyList.html',
     'views/settingsOverview/Accounting/currency/currencyEdit',
     'views/settingsOverview/Accounting/currency/currencyCreate'
 ], function (Backbone, _, $, PaymentMethodList, EditView, CreateView) {

@@ -1,7 +1,7 @@
 define([
     'jQuery',
     'Underscore',
-    'text!templates/Proforma/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Proforma/TopBarTemplate.html',
     'views/topBarViewBase',
     'custom',
     'common',

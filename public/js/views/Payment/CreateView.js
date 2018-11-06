@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/Payment/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Payment/CreateTemplate.html',
     'collections/Persons/PersonsCollection',
     'collections/Departments/DepartmentsCollection',
     'collections/salesInvoices/filterCollection',

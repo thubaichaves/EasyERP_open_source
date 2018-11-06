@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/PayrollExpenses/generate/generate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/PayrollExpenses/generate/generate.html',
     'moment',
     'constants'
 ], function (Backbone, $, _, Parent, GenetareTemplate, moment, CONSTANTS) {

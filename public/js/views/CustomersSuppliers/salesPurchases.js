@@ -1,8 +1,8 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/CustomersSuppliers/salesPurchases.html',
-    'text!templates/CustomersSuppliers/tFormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/CustomersSuppliers/salesPurchases.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/CustomersSuppliers/tFormTemplate.html',
     'populate',
     'constants'
 ], function (Backbone, _, listTemplate, tFormTemplate, populate, CONSTANTS) {

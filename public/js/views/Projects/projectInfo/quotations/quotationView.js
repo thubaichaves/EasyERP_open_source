@@ -1,8 +1,8 @@
 define([
     'Underscore',
     'jQuery',
-    'text!templates/Projects/projectInfo/quotations/quotationTemplate.html',
-    'text!templates/Projects/projectInfo/quotations/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/quotations/quotationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/quotations/ListTemplate.html',
     'views/salesQuotations/EditView',
     'views/salesQuotations/list/ListView',
     'views/Projects/projectInfo/quotations/CreateView',

@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/resolveConflicts/contentTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/resolveConflicts/contentTemplate.html',
     'dataService'
 ], function (Backbone, $, _, ListViewBase, contentTemplate, dataService) {
     'use strict';

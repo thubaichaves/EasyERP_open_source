@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/salesInvoices/EmailTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salesInvoices/EmailTemplate.html',
     'common',
     'populate',
     'dataService',

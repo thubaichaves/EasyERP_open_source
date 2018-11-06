@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/rates/LoadTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/rates/LoadTemplate.html',
     'dataService',
     'moment'
 ], function (Backbone, $, _, Parent, template, dataService, moment) {

@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Proforma/list/ListView',
-    'text!templates/Projects/projectInfo/proformaTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/proformaTemplate.html',
     'views/Proforma/EditView',
     'views/Proforma/list/ListItemView',
     'collections/Proforma/filterCollection',

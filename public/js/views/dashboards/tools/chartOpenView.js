@@ -5,7 +5,7 @@ define([
     'views/dialogViewBase',
     'views/Filter/dateFilter',
     'views/dashboards/tools/ChartView',
-    'text!templates/dashboards/tools/openViewTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/tools/openViewTemplate.html'
 ], function (Backbone, $, _, ParentView, DateFilterView, ChartView, OpenViewTemplate) {
 
     var OpenView = ParentView.extend({

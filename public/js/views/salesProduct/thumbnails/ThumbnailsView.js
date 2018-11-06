@@ -7,7 +7,7 @@ define([
         'models/ProductModel',
         'views/Filter/filterView',
         'common',
-        'text!templates/Alpabet/AphabeticTemplate.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Alpabet/AphabeticTemplate.html',
         'constants'
     ],
 

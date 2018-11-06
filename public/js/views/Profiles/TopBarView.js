@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/Profiles/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Profiles/TopBarTemplate.html',
     'dataService'
 ], function ($, _, BaseView, TopBarTemplate, dataService) {
     'use strict';

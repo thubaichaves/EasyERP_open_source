@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Users/form/FormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Users/form/FormTemplate.html',
     'models/UsersModel',
     'views/Users/EditView'
 ], function (Backbone, _, FormTemplate, userModel, EditView) {

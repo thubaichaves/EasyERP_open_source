@@ -1,0 +1,59 @@
+<div class="form-holder _newForm">
+    <form method="post" action="" id="createChartOfAccount" class="form">
+        <h4 class="_dialogMainTitle">{{Chart_of_Accounts}}</h4>
+        <div class="_formWrap">
+            <div class="_formBlock">
+                <div class="_animateSelectBox">
+                    <span class="_selectTitle">{{Account_Category}}</span>
+                    <div class="_newSelectListWrap">
+                        <a id="accountsCategory"
+                           class="current-selected">{{Select_account_category}}</a>
+                    </div>
+                </div>
+                <div class="_animateInputBox">
+                    <input type="text"
+                           class="_animate"
+                           id="nameInput"
+                           required
+                           maxlength="45"/>
+                    <label class="_animate">{{Account_Name}}</label>
+                </div>
+
+                <div class="_formRow hidden" id="budgeted">
+                    <label class="_animatedCheckbox">
+                        <input id="budgeted"
+                               type="checkbox"
+                               checked>
+                        <span></span>
+                    </label>
+                    <label for="budgeted">{{Is_Budgeted}}</label>
+                </div>
+
+               <!-- <div class="_formRow hidden" id="subCheck">
+                    <label class="_animatedCheckbox">
+                        <input id="subAccount"
+                               type="checkbox">
+                        <span></span>
+                    </label>
+                    <label for="subAccount">Make this a sub-account</label>
+                </div>-->
+
+                <!--<div class="_animateSelectBox">
+                    <span class="_selectTitle">Account</span>
+                    <div class="_newSelectListWrap">
+                        <a id="chartsDd"
+                           class="current-selected">Select account</a>
+                    </div>
+                </div>-->
+                <div class="_animateInputBox">
+                    <input type="text"
+                           class="_animate"
+                           id="code"
+                           required
+                           maxlength="25"/>
+                    <label class="_animate">{{Account_Code}}</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/DividendInvoice/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendInvoice/CreateTemplate.html',
     'views/dialogViewBase',
     'models/InvoiceModel',
     'populate',

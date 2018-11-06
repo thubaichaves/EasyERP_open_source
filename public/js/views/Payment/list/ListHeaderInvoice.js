@@ -1,8 +1,8 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Payment/list/ListHeaderInvoice.html',
-    'text!templates/Payment/list/ListTemplateInvoice.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Payment/list/ListHeaderInvoice.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Payment/list/ListTemplateInvoice.html',
     'helpers'
 ], function (Backbone, _, listHeaderTemplate, listTemplate, helpers) {
     var PaymentItemsTemplate = Backbone.View.extend({

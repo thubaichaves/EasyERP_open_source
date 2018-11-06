@@ -6,7 +6,7 @@ define([
     'views/payrollStructureTypes/CreateView',
     'views/payrollStructureTypes/EditView',
     'views/payrollStructureTypes/list/ListItemView',
-    'text!templates/payrollStructureTypes/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollStructureTypes/list/ListHeader.html',
     'collections/payrollStructure/filterCollection',
     'models/PayrollStructureTypesModel'
 ], function ($,

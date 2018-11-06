@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/selectView/selectTemplate.html',
-    'text!templates/selectView/selectContent.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/selectView/selectTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/selectView/selectContent.html',
     'collections/Filter/filterCollection',
     'dataService'
 ], function (Backbone, $, _, selectTemplate, selectContent, FilterCollection, dataService) {

@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/PayrollExpenses/form/dialogTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/PayrollExpenses/form/dialogTemplate.html',
     'dataService',
     'helpers',
     'common'
@@ -41,7 +41,7 @@ define([
             this.data = options.data;
 
             this.$el.append(template);
-            
+
             App.stopPreload();
 
             return this;

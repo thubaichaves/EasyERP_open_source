@@ -3,10 +3,10 @@ define([
     'Underscore',
     'Backbone',
     'views/dialogViewBase',
-    'text!templates/payrollStructureTypes/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollStructureTypes/CreateTemplate.html',
     'models/PayrollStructureTypesModel',
     'views/payrollStructureTypes/structureElement/CreateView',
-    'text!templates/payrollStructureTypes/componentTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollStructureTypes/componentTemplate.html',
     'populate',
     'dataService'
 ], function ($, _, Backbone, Parent, CreateTemplate, PayrollStructureTypesModel, StructureElementView, componentTemplate, populate, dataService) {

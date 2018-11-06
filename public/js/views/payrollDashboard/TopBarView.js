@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/payrollDashboard/TopBarTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollDashboard/TopBarTemplate.html'
 ], function ($, _, BaseView, TopBarTemplate) {
     var TopBarView = BaseView.extend({
         el         : '#top-bar',

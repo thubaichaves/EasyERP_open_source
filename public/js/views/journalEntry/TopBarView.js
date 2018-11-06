@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/journalEntry/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/journalEntry/TopBarTemplate.html',
     'custom',
     'constants',
     'dataService',

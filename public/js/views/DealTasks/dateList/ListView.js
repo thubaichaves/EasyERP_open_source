@@ -1,10 +1,10 @@
 define([
     'jQuery',
     'Underscore',
-    'text!templates/Pagination/PaginationTemplate.html',
-    'text!templates/DealTasks/dateList/ListHeader.html',
-    'text!templates/DealTasks/dateList/dateItemTemplate.html',
-    'text!templates/DealTasks/dateList/activityTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Pagination/PaginationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DealTasks/dateList/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DealTasks/dateList/dateItemTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DealTasks/dateList/activityTemplate.html',
     'views/pagination',
     'views/DealTasks/CreateView',
     'views/DealTasks/EditView',
@@ -86,7 +86,7 @@ define([
             model.save({
                 sequenceStart: sequence,
                 workflow     : '5783b351df8b918c31af24ab',
-                sequence     : -1,  
+                sequence     : -1,
                 workflowStart: workflow
             }, {
                 patch  : true, validate: false,

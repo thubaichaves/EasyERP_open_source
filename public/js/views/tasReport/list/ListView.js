@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/tasReport/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/tasReport/list/ListHeader.html',
     'views/tasReport/list/ListItemView',
     'collections/tasReport/filterCollection',
     'views/journalEntry/ViewSource',

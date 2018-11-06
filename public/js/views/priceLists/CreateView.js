@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/priceLists/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/priceLists/CreateTemplate.html',
     'views/dialogViewBase',
     'models/PriceListsModel',
     'common',

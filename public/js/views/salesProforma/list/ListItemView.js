@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/salesProforma/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salesProforma/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, listTemplate, helpers) {
     var InvoiceListItemView = Backbone.View.extend({

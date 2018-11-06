@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/settingsOverview/productDetails/priceLists/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/priceLists/ListTemplate.html',
     'views/settingsOverview/productDetails/priceLists/EditView',
     'views/settingsOverview/productDetails/priceLists/CreateView',
     'helpers/ga',
@@ -16,7 +16,7 @@ define([
         initialize: function (options) {
             this.startTime = options.startTime;
             this.collection = options.collection;
-            
+
             this.collection.bind('add change', this.render, this);
 
             this.render();

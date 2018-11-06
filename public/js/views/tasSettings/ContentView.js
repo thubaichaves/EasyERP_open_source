@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/tasSettings/IndexTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/tasSettings/IndexTemplate.html',
     'async',
     'dataService',
     'collections/tasSettings/filterCollection',

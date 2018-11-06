@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Tasks/kanban/KanbanItemTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Tasks/kanban/KanbanItemTemplate.html'
 ], function (Backbone, _, KanbanItemTemplate) {
     var TasksItemView = Backbone.View.extend({
         className: 'item',
@@ -13,10 +13,10 @@ define([
 
         render: function () {
             var holder = this.$el;
-            
+
             holder.html(this.template({model: this.model.toJSON()}));
             holder.attr('data-id', this.model.get('_id'));
-            
+
             return this;
         }
     });

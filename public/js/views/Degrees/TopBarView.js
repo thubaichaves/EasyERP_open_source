@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Degrees/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Degrees/TopBarTemplate.html',
     'custom',
     'Common'
 ], function (Backbone, $, _, ContentTopBarTemplate, Custom, Common) {
@@ -20,7 +20,7 @@ define([
             'click #top-bar-deleteBtn'     : 'deleteEvent',
             'click #top-bar-discardBtn'    : 'discardEvent'
         },
-        
+
         changeContentViewType: Custom.changeContentViewType,
         changeItemIndex      : Custom.changeItemIndex,
 

@@ -4,7 +4,7 @@ define([
     'Underscore',
     'async',
     'views/Filter/dateFilter',
-    'text!templates/reportsDashboard/DashboardTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reportsDashboard/DashboardTemplate.html',
     'custom',
     'collections/Filter/filterCollection',
     'collections/Workflows/WorkflowsCollection',

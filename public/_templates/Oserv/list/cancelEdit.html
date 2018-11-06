@@ -1,0 +1,12 @@
+<tr data-id="<%=oserv._id%>">
+    <td class="editable employee" data-content="employee" data-type="employeeSelect">
+        <span title="Delete" class="icon-trash"></span>
+        <%=oserv.employee ? oserv.employee.name.first + oserv.employee.name.last : ''%>
+    </td>
+    <td class="department">
+        <%=oserv.department ? oserv.department.name : ''%>
+    </td>
+    <% for (var i=0; i<=oserv.vacArray.length - 1; i++) { %>
+    <%=oserv.vacArray[i] ? '<td data-dayID="' + (i) + '" class="editable selectedType ' + oserv.vacArray[i] + '" data-content="vacType">' + oserv.vacArray[i] + ' </td> ' : '<td data-dayID="' + (i) + '" class="editable" data-content="vacType"></td>'%>
+    <% } %><td class="totalDays"> <%=oserv.countOservDays%> </td>
+</tr>

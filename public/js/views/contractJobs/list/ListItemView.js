@@ -3,7 +3,7 @@ define([
     'Underscore',
     'jQuery',
     'd3',
-    'text!templates/contractJobs/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/contractJobs/list/ListTemplate.html',
     'helpers',
     'common'
 ], function (Backbone, _, $, d3, ListTemplate, helpers, common) {

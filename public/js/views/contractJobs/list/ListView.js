@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/contractJobs/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/contractJobs/list/ListHeader.html',
     'views/contractJobs/list/ListItemView',
     'collections/contractJobs/filterCollection',
     'models/InvoiceModel',

@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/workCenters/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/workCenters/CreateTemplate.html',
     'views/dialogViewBase',
     'models/WorkCenterModel',
     'helpers/keyValidator'

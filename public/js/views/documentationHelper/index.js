@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/documentationHelper/mailTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/documentationHelper/mailTemplate.html'
 ], function (Backbone, $, _, indexTemplate) {
     var View = Backbone.View.extend({
         el: '#helpContainer',

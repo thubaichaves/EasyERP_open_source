@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Tags/EditTag.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Tags/EditTag.html',
     'views/selectView/selectView',
     'populate',
     'constants'

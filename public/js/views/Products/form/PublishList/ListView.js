@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/Products/form/PublishList/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/form/PublishList/ListHeader.html',
     'views/Products/form/PublishList/ListItemView',
     'views/Products/publishProductView',
     'views/selectView/selectView',

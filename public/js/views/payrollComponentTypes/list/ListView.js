@@ -7,7 +7,7 @@ define([
     'views/payrollStructureTypes/structureElement/CreateView',
     'views/payrollComponentTypes/EditView',
     'views/payrollComponentTypes/list/ListItemView',
-    'text!templates/payrollComponentTypes/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollComponentTypes/list/ListHeader.html',
     'collections/payrollComponentTypes/filterCollection',
     'common',
     'dataService',

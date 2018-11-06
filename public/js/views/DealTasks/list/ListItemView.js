@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/DealTasks/list/ListTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DealTasks/list/ListTemplate.html'
 ], function (Backbone, _, ListTemplate) {
     var TasksListItemView = Backbone.View.extend({
         el: '#listTable',

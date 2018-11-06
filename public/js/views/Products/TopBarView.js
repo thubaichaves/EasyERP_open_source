@@ -1,8 +1,8 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/Products/TopBarTemplate.html',
-    'text!templates/Notes/importTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Notes/importTemplate.html',
     'views/Notes/AttachView',
     'custom',
     'common',

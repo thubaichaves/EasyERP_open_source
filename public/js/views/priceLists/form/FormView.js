@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/priceLists/form/FormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/priceLists/form/FormTemplate.html',
     'views/dialogViewBase',
     'constants',
     'populate'

@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/salaryReport/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salaryReport/TopBarTemplate.html',
     'custom',
     'constants',
     'common',

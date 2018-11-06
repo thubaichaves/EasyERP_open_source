@@ -3,7 +3,7 @@ define([
     'Underscore',
     'views/topBarViewBase',
     'views/Filter/dateFilter',
-    'text!templates/warehouseMovements/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouseMovements/TopBarTemplate.html',
     'constants',
     'common',
     'custom'

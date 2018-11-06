@@ -4,7 +4,7 @@ define([
     'Underscore',
     'async',
     'views/Filter/dateFilter',
-    'text!templates/Dashboard/DashboardTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Dashboard/DashboardTemplate.html',
     'custom',
     'd3',
     'common',

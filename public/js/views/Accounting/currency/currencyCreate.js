@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/selectView/selectView',
-    'text!templates/Accounting/CreateCurrency.html',
-    'text!templates/Accounting/currencyEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/CreateCurrency.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/currencyEl.html',
     'models/currency',
     'populate'
 ], function (Backbone, $, _, SelectView, template, tableEL, Model, populate) {

@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/listViewBase',
     'views/Import/ListItemView',
-    'text!templates/Import/ImportHistoryTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Import/ImportHistoryTemplate.html',
     'constants',
     'dataService',
     'moment'

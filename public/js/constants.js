@@ -148,7 +148,7 @@ define([], function () {
             'wTrack',
             'ChartOfAccount'
         ],
-
+        lang: 'ptbr',
         SELECTP_ROJECT: 'Please select a Project',
 
         IT_SERVICES: 'IT services',

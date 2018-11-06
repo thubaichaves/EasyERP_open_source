@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/projectsDashboard/settingsView',
-    'text!templates/projectsDashboard/DashboardTemplate.html',
-    'text!templates/projectsDashboard/settingsDashboardTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/projectsDashboard/DashboardTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/projectsDashboard/settingsDashboardTemplate.html',
     'async',
     'dataService',
     'helpers'

@@ -2,7 +2,7 @@ define([
     'Underscore',
     'jQuery',
     'views/topBarViewBase',
-    'text!templates/Orders/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Orders/TopBarTemplate.html',
     'custom',
     'common',
     'constants'

@@ -3,7 +3,7 @@ define([
     'Underscore',
     'Backbone',
     'views/listViewBase',
-    'text!templates/settingsOverview/settingsEmployee/payrollStructureTypes/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/payrollStructureTypes/ListTemplate.html',
     'views/settingsOverview/settingsEmployee/payrollStructureTypes/structureElement/CreateView',
     'views/settingsOverview/settingsEmployee/payrollComponentTypes/EditView',
     'collections/payrollComponentTypes/filterCollection',

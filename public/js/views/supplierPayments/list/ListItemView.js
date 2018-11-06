@@ -1,12 +1,12 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/supplierPayments/list/ListTemplate.html',
-    'text!templates/supplierPayments/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/supplierPayments/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/supplierPayments/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, PaymentListTemplate, forWTrackListTemplate, helpers) {
     'use strict';
-    
+
     var PaymentListItemView = Backbone.View.extend({
         el: '#listTable',
 

@@ -2,7 +2,7 @@ define([
     'Underscore',
     'views/topBarViewBase',
     'jQuery',
-    'text!templates/Workflows/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Workflows/TopBarTemplate.html',
     'custom',
     'common'
 ], function (_, BaseView, $, ContentTopBarTemplate, Custom, Common) {

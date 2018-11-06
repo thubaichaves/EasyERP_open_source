@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/settingsOverview/productDetails/shippingMethod/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/shippingMethod/ListTemplate.html',
     'views/settingsOverview/productDetails/shippingMethod/EditView',
     'views/settingsOverview/productDetails/shippingMethod/CreateView',
     'helpers',

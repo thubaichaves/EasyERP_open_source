@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/trialBalance/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/trialBalance/list/ListHeader.html',
     'views/trialBalance/list/ListItemView',
     'collections/trialBalance/filterCollection',
     'views/journalEntry/ViewSource',

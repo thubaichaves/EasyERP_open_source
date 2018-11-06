@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/integrationUnlinkedOrders/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/integrationUnlinkedOrders/list/ListHeader.html',
     'views/integrationUnlinkedOrders/list/ListItemView',
     'constants'
 ], function (Backbone, $, _, listViewBase, listTemplate, ListItemView, CONSTANTS) {

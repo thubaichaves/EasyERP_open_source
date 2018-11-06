@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/dashboards/tools/ContainerTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/tools/ContainerTemplate.html',
     'views/dashboards/tools/ChartView',
     'views/dashboards/tools/chartOpenView',
     'moment',

@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Birthdays/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Birthdays/list/ListTemplate.html',
     'views/Birthdays/list/ListItemView',
     'common',
     'views/guideTours/guideNotificationView'
@@ -15,7 +15,7 @@ define([
             this.employeesCollection = options.collection.toJSON()[0];
             this.render();
         },
-        
+
         render: function () {
             var list;
             var ids;

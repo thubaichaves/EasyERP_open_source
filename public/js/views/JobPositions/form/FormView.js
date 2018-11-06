@@ -2,7 +2,7 @@ define([
         'Backbone',
         'jQuery',
         'Underscore',
-        'text!templates/JobPositions/form/FormTemplate.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/JobPositions/form/FormTemplate.html',
         'views/JobPositions/EditView'
     ],
     function (Backbone, $, _, FormTemplate, EditView) {

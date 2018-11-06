@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/wTrack/CreateTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/wTrack/CreateTemplate.html'
 ], function (Backbone, _, CreateTemplate) {
     var CreateView = Backbone.View.extend({
         el      : '#listTable',

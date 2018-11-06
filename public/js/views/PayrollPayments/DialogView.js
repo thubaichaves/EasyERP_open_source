@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'underscore',
-    'text!templates/PayrollPayments/DialogTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/PayrollPayments/DialogTemplate.html',
     'helpers'
 ], function (Backbone, $, _, CreateTemplate, helpers) {
     'use strict';

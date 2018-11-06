@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/settingsOverview/settingsEmployee/weeklyScheduler/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/weeklyScheduler/CreateTemplate.html',
     'models/WeeklySchedulerModel',
     'helpers/ga'
 ], function ($, _, Backbone, CreateTemplate, WeeklySchedulerModel, ga) {

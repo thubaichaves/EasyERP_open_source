@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Attendance/statisticsTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Attendance/statisticsTemplate.html'
 ], function (Backbone, $, _, statiscticsBlock) {
     'use strict';
 

@@ -2,7 +2,7 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Applications/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Applications/EditTemplate.html',
     'views/selectView/selectView',
   'views/Editor/NoteView',
   'views/Editor/AttachView',

@@ -1,11 +1,11 @@
 define([
     'views/listViewBase',
-    'text!templates/Products/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/list/ListHeader.html',
     'views/Products/CreateView',
     'views/salesProduct/list/ListItemView',
     'views/Products/EditView',
     'models/ProductModel',
-    'text!templates/Alpabet/AphabeticTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Alpabet/AphabeticTemplate.html',
     'collections/salesProduct/filterCollection',
     'views/Filter/filterView',
     'common',

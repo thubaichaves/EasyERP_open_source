@@ -6,7 +6,7 @@ define([
     'views/scheduledPay/CreateView',
     'views/scheduledPay/EditView',
     'views/scheduledPay/list/ListItemView',
-    'text!templates/scheduledPay/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/scheduledPay/list/ListHeader.html',
     'collections/scheduledPay/filterCollection'
 ], function ($, _, Backbone, ListViewBase, CreateView, EditView, ListItemView, listTemplate, ContentCollection) {
     var SchedulerPayListView = ListViewBase.extend({

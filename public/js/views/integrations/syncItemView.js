@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'collections/syncLog/filterCollection',
-    'text!templates/syncLogs/itemLogTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/syncLogs/itemLogTemplate.html'
 ], function (Backbone,
              $,
              _,

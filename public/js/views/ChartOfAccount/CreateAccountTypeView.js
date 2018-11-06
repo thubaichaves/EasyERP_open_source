@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/ChartOfAccount/createAccountType.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ChartOfAccount/createAccountType.html',
     'dataService'
 ], function (Backbone, $, _, generateTemplate, dataService) {
     'use strict';

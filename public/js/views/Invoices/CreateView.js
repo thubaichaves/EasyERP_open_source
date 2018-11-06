@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/Invoices/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Invoices/CreateTemplate.html',
     'models/InvoiceModel',
     'populate',
     'views/Invoices/InvoiceProductItems',

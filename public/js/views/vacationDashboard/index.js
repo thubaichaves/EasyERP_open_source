@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/vacationDashboard/index.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/vacationDashboard/index.html',
     'views/vacationDashboard/statisticsView',
     'collections/Dashboard/vacationDashboard',
     'views/wTrack/dashboard/vacationDashEdit',

@@ -2,9 +2,9 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Accounting/EditCurrency.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/EditCurrency.html',
     'views/selectView/selectView',
-    'text!templates/Accounting/currencyEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/currencyEl.html',
     'populate',
     'constants',
     'helpers/keyValidator'

@@ -2,7 +2,7 @@ define([
     'Underscore',
     'jQuery',
     'views/topBarViewBase',
-    'text!templates/wTrack/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/wTrack/TopBarTemplate.html',
     'custom',
     'common'
 ], function (_, $, BaseView, ContentTopBarTemplate, Custom, Common) {

@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Applications/kanban/KanbanItemTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Applications/kanban/KanbanItemTemplate.html',
     'common',
     'moment'
 ], function (Backbone, $, _, KanbanItemTemplate, common, moment) {

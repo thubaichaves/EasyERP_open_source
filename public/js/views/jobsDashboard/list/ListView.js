@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/jobsDashboard/DashboardHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/jobsDashboard/DashboardHeader.html',
     'collections/Jobs/filterCollection',
     'views/jobsDashboard/list/ListItemView',
     'views/Projects/projectInfo/journalEntriesForJob/dialogView',

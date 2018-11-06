@@ -2,9 +2,9 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/routing/EditTemplate.html',
-    'text!templates/routing/OperationCreateTemplate.html',
-    'text!templates/routing/OperationsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/routing/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/routing/OperationCreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/routing/OperationsTemplate.html',
     'views/dialogViewBase',
     'populate'
 ], function (Backbone, $, _, CreateTemplate, OperationCreateTemplate, OperationsTemplate, ParentView, populate) {

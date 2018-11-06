@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/Employees/compactContentTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Employees/compactContentTemplate.html'
 ], function (Backbone, _, compactContentTemplate) {
     'use strict';
     var compactContentView = Backbone.View.extend({

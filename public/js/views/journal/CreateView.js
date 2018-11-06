@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/journal/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/journal/CreateTemplate.html',
     'models/JournalModel',
     'populate'
 ], function (Backbone, $, _, ParentView, CreateTemplate, JournalModel, populate) {

@@ -3,11 +3,11 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/warehouse/ListTemplate.html',
-    'text!templates/warehouse/ItemTemplate.html',
-    'text!templates/warehouse/CreateZoneTemplate.html',
-    'text!templates/warehouse/CreateLocationTemplate.html',
-    'text!templates/warehouse/zonesAndLocationsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/ItemTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/CreateZoneTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/CreateLocationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouse/zonesAndLocationsTemplate.html',
     'views/warehouse/CreateView',
     'models/warehouse',
     'models/zoneModel',
@@ -531,7 +531,7 @@ define([
 
             populate.get('#address_country', CONSTANTS.URLS.COUNTRIES, {}, 'name', this, true);
             populate.get('#account', '/chartOfAccount/getForDd', {}, 'name', this, true, true);
-            
+
             this.$el.append('<div id="timeRecivingDataFromServer">Created in ' + (new Date() - this.startTime) + ' ms</div>');
 
             return this;

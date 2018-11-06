@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/selectView/selectView',
-    'text!templates/Accounting/accountsCategories/CreateTemplate.html',
-    'text!templates/Accounting/accountsCategories/elementTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/accountsCategories/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/accountsCategories/elementTemplate.html',
     'models/accountsCategory',
     'populate'
 ], function (Backbone, $, _, SelectView, template, tableEL, Model, populate) {

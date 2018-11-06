@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/login/LoginTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/login/LoginTemplate.html',
     'custom',
     'dataService'
 ], function (Backbone, _, $, LoginTemplate, Custom, dataService) {

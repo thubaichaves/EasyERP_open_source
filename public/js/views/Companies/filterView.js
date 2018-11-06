@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Companies/filterViewList.html',
-    'text!templates/Companies/filterViewContent.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Companies/filterViewList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Companies/filterViewContent.html',
     'views/Companies/CreateView',
     'dataService',
     'collections/Filter/filterCollection'

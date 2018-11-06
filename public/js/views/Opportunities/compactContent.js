@@ -2,7 +2,7 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Opportunities/compactContentTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Opportunities/compactContentTemplate.html',
     'views/Opportunities/EditView',
     'models/OpportunitiesModel'
 ], function (Backbone, $, _, compactContentTemplate, editView, currentModel) {

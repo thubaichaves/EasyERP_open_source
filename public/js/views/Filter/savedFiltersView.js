@@ -2,8 +2,8 @@ define([
         'Backbone',
         'jQuery',
         'Underscore',
-        'text!templates/Filter/filterFavourites.html',
-        'text!templates/Filter/filterFavouritesElements.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Filter/filterFavourites.html',
+        'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Filter/filterFavouritesElements.html',
         'models/UsersModel'
     ],
     function (Backbone, $, _, SavedFilterTemplate, SavedElementsTemplate, UserModel) {

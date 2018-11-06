@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/syncLogs/lastLogTemplate.html',
-    'text!templates/syncLogs/logStatsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/syncLogs/lastLogTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/syncLogs/logStatsTemplate.html',
     'dataService',
     'constants'
 ], function (Backbone, $, _, BaseView, LastLogTemplate, logStatsTemplate, dataService, CONSTANTS) {

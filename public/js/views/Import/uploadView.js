@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'models/UsersModel',
-    'text!templates/Import/uploadTemplate.html',
-    'text!templates/Notes/importTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Import/uploadTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Notes/importTemplate.html',
     'views/Notes/AttachView',
     'constants'
 ], function (Backbone, $, _, UserModel, UploadTemplate, ImportTemplate, AttachView, CONSTANTS) {

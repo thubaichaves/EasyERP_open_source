@@ -1,8 +1,8 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/orgSettings/ProfileTemplate.html',
-    'text!templates/orgSettings/emailSettings.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/orgSettings/ProfileTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/orgSettings/emailSettings.html',
     'models/orgSettings',
     'views/selectView/selectView',
     'dataService',

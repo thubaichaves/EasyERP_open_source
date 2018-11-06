@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/JobPositions/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/JobPositions/CreateTemplate.html',
     'models/JobPositionsModel',
     'views/dialogViewBase',
     'populate',

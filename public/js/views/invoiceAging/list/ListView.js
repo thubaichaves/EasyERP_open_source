@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/invoiceAging/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/invoiceAging/list/ListHeader.html',
     'views/invoiceAging/list/ListItemView',
     'collections/invoiceAging/filterCollection',
     'views/guideTours/guideNotificationView',

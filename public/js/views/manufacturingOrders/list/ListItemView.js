@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/manufacturingOrders/list/ListItemTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/manufacturingOrders/list/ListItemTemplate.html'
 ], function (Backbone, _, $, ItemTemplate) {
     var View = Backbone.View.extend({
         el: '#listContainer',

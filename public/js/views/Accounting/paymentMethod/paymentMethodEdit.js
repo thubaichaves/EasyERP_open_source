@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Accounting/EditPaymentMethods.html',
-    'text!templates/Accounting/paymentMethodEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/EditPaymentMethods.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/paymentMethodEl.html',
     'views/selectView/selectView',
     'populate',
     'constants'

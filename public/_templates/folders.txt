@@ -1,0 +1,139 @@
+x Accounting
+x Alpabet
+x Applications
+x Assignees
+x Attendance
+x balanceSheet
+billOfMaterials
+Birthdays
+Bonus
+bonusType
+Capacity
+x cashBook
+x cashFlow
+x cashTransfer
+Category
+ChartOfAccount
+x closeMonth
+Companies
+ConflictAndUnlinkedProducts
+contractJobs
+customerPayments
+CustomersSuppliers
+Dashboard
+dashboards
+DealTasks
+Degrees
+Departments
+DividendInvoice
+DividendPayments
+documentationHelper
+Editor
+employeeProfileSettings
+Employees
+Error
+ExpensesInvoice
+ExpensesPayments
+Filter
+followers
+x goodsInNotes
+x goodsOutNotes
+guideTours
+helpers
+Holiday
+Hours
+hrDashboard
+Images
+Import
+Integrations
+integrationUnlinkedOrders
+integrationUnlinkedProducts
+inventoryReport
+invoice
+invoiceAging
+invoiceCharts
+Invoices
+JobPositions
+jobsDashboard
+x journal
+x journalEntry
+Leads
+login
+mailer
+main
+x manualEntry
+manufacturingOrders
+menu
+monthHours
+myProfile
+NoteEditor
+Notes
+Opportunities
+order
+Orders
+orgSettings
+Oserv
+oservDashboard
+Pagination
+Payment
+payrollComponentTypes
+payrollDashboard
+PayrollExpenses
+PayrollPayments
+payrollStructureTypes
+Persons
+priceLists
+x ProductCategory
+x Products
+x productSettings
+x productsSettings
+x productType
+Profiles
+x profitAndLoss
+proforma
+projectCharts
+projectDashboard
+Projects
+projectsDashboard
+purchaseInvoices
+purchaseOrders
+Quotations
+refund
+reports
+reportsDashboard
+resolveConflicts
+Revenue
+routing
+salaryReport
+salesInvoices
+salesOrders
+salesProforma
+salesQuotations
+scheduledPay
+selectView
+settingsEmployee
+settingsOverview
+stockCorrections
+stockInventory
+stockReturns
+stockTransactions
+supplierPayments
+syncLogs
+Tags
+Tasks
+tasReport
+tasSettings
+taxReport
+taxSettings
+top-menu
+x trialBalance
+Users
+Vacation
+vacationDashboard
+warehouse
+warehouseMovements
+weeklyScheduler
+workCenters
+Workflows
+WriteOff
+wTrack

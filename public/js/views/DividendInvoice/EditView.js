@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/DividendInvoice/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendInvoice/EditTemplate.html',
     'views/dialogViewBase',
     'views/DividendInvoice/InvoiceProductItems',
     'views/salesInvoices/wTrack/wTrackRows',

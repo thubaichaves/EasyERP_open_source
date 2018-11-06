@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/topBarViewBase',
     'views/Filter/dateFilter',
-    'text!templates/inventoryReport/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/inventoryReport/TopBarTemplate.html',
     'custom',
     'constants',
     'dataService',

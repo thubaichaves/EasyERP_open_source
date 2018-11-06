@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/tasSettings/TasListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/tasSettings/TasListTemplate.html',
     'views/tasSettings/TasEdit',
     'views/tasSettings/TasCreate'
 

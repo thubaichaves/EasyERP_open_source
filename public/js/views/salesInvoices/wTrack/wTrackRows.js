@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/salesInvoices/wTrack/wTrackRows.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salesInvoices/wTrack/wTrackRows.html',
     'helpers'
 ], function (Backbone, _, wTrackRowsHeader, helpers) {
     var ProductItemTemplate = Backbone.View.extend({

@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/listViewBase',
     'collections/conflicts/filterCollection',
-    'text!templates/integrationUnlinkedProducts/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/integrationUnlinkedProducts/list/ListHeader.html',
     'views/ConflictAndUnlinkedProducts/integrationUnlinkedProducts/list/ListItemView',
     'views/ConflictAndUnlinkedProducts/integrationUnlinkedProducts/linkProduct',
     'views/ConflictAndUnlinkedProducts/integrationUnlinkedProducts/buildProduct',

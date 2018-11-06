@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/payrollDashboard/settingsDashboardTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollDashboard/settingsDashboardTemplate.html'
 ], function (Backbone, $, _, settingsTemplate) {
     var ContentView = Backbone.View.extend({
         el      : '#settings',

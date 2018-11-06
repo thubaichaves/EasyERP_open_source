@@ -1,7 +1,7 @@
 ﻿define([
     'Backbone',
     'Underscore',
-    'text!templates/salesQuotations/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salesQuotations/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, listForWTrack, helpers) {
     'use strict';

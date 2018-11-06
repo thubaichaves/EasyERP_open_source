@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/payrollDashboard/settingsView',
-    'text!templates/payrollDashboard/DashboardTemplate.html',
-    'text!templates/payrollDashboard/settingsDashboardTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollDashboard/DashboardTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollDashboard/settingsDashboardTemplate.html',
     'async',
     'dataService'
 ], function (Backbone, $, _, SettingsView, contentTemplate, settingsTemplate, async, dataService) {

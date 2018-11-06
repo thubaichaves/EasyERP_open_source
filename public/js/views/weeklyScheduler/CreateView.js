@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/weeklyScheduler/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/weeklyScheduler/CreateTemplate.html',
     'models/WeeklySchedulerModel'
 ], function ($, _, Backbone, CreateTemplate, WeeklySchedulerModel) {
 

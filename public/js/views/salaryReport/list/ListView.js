@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/salaryReport/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/salaryReport/list/ListHeader.html',
     'views/salaryReport/list/ListItemView',
     'views/Filter/filterView',
     'collections/salaryReport/filterCollection',

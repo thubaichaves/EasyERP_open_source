@@ -2,9 +2,9 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Profiles/CreateProfileTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Profiles/CreateProfileTemplate.html',
     'models/ProfilesModel',
-    'text!templates/Profiles/ModulesAccessListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Profiles/ModulesAccessListTemplate.html',
     'populate',
     'views/selectView/selectView',
     'views/dialogViewBase'

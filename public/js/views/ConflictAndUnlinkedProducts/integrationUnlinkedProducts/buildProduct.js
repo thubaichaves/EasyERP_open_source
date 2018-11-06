@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/integrationUnlinkedProducts/BuildProductTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/integrationUnlinkedProducts/BuildProductTemplate.html'
 ], function (Backbone,
              $,
              _,

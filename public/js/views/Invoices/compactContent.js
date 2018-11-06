@@ -2,7 +2,7 @@
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Persons/compactContentTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Persons/compactContentTemplate.html'
 ], function (Backbone, $, _, compactContentTemplate) {
     'use strict';
 

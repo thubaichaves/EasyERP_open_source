@@ -10,6 +10,10 @@ module.exports = function (app, mainDb) {
     var dbsNames = app.get('dbsNames');
     var dbsObject = mainDb.dbsObject;
     var models = require('../helpers/models.js')(dbsObject);
+    //
+    models.sequelize = require('../modulos/rdb')();
+    models.niskDb = mainDb.niskDb;
+    //
     var productRouter = require('./product')(models, event);
     //var oservRouter = require('./oserv')(models, event);
     var orderRouter = require('./order')(models, event);
@@ -207,6 +211,8 @@ module.exports = function (app, mainDb) {
         res.sendfile('index.html');
     });
 
+    //app.get('/x',  app.status());
+
     app.use('/filter', filterRouter);
     app.use('/products', productRouter);
     app.use('/oserv', oservRouter);
@@ -369,6 +375,13 @@ module.exports = function (app, mainDb) {
     app.get('/getDBS', function (req, res) {
         res.send(200, {dbsNames: dbsNames});
     });
+    app.get('/getDBx', function (req, res) {
+        res.send(200, {
+            "startDate": "2018-10-30T12:51:28.110Z",
+            "endDate": "2018-10-30T12:51:28.110Z",
+            "campgroundId": 455763758
+        });
+    })
 
     app.post('/exportToPdf', exportToPdf.post);
     app.get('/exportToPdf', exportToPdf.get);

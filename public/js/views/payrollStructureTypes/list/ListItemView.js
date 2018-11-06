@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/payrollStructureTypes/list/ListTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollStructureTypes/list/ListTemplate.html'
 ], function (Backbone, _, listTemplate) {
     'use strict';
     var ListItemView = Backbone.View.extend({

@@ -7,6 +7,7 @@ var models = require('./helpers/models')(dbsObject);
 var dbsNames = {};
 var connectOptions;
 var mainDb;
+//var niskDb
 var app;
 
 require('pmx').init();
@@ -21,6 +22,9 @@ connectOptions = {
     j     : true
 };
 mainDb = mongoose.createConnection(process.env.MAIN_DB_HOST, process.env.MAIN_DB_NAME, process.env.DB_PORT, connectOptions);
+
+mainDb.niskDb = mongoose.createConnection(process.env.MAIN_DB_HOST, 'NISK', process.env.DB_PORT, connectOptions);
+
 mainDb.on('error', function (err) {
     err = err || 'connection error';
     console.error(err);
@@ -89,6 +93,7 @@ mainDb.once('open', function callback() {
                 return console.error(err);
             }
             app = require('./app')(mainDb, dbsNames);
+
 
             app.listen(port, function () {
                 var Scheduler = require('./services/scheduler')(models);

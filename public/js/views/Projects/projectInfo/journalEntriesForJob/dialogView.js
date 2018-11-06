@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/Projects/projectInfo/journalEntriesForJob.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/journalEntriesForJob.html',
     'dataService',
     'helpers',
     'common',

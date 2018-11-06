@@ -6,7 +6,7 @@ define([
     'views/weeklyScheduler/CreateView',
     'views/weeklyScheduler/EditView',
     'views/weeklyScheduler/list/ListItemView',
-    'text!templates/weeklyScheduler/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/weeklyScheduler/list/ListHeader.html',
     'collections/weeklyScheduler/filterCollection'
 ], function ($, _, Backbone, ListViewBase, CreateView, EditView, ListItemView, listTemplate, ContentCollection) {
     var WeeklySchedulerListView = ListViewBase.extend({

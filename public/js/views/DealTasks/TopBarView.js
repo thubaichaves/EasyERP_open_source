@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/DealTasks/TopBarTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DealTasks/TopBarTemplate.html'
 ], function (_, BaseView, ContentTopBarTemplate) {
     var TopBarView = BaseView.extend({
         el           : '#top-bar',

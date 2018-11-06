@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/ExpensesPayments/list/ListTotal.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ExpensesPayments/list/ListTotal.html',
     'helpers'
 ], function (Backbone, $, _, listTemplate, helpers) {
     'use strict';

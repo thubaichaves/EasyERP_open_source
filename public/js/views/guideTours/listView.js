@@ -6,8 +6,8 @@ define([
     'views/dialogViewBase',
     'views/guideTours/guideNotificationView',
     'dataService',
-    'text!templates/guideTours/listTemplate.html',
-    'text!templates/guideTours/notificationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/guideTours/listTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/guideTours/notificationTemplate.html',
     'constants/guideTours'
 ], function (Backbone, $, _, Parent, NotifyView, dataService, template, notifyTemplate, GUIDES) {
     'use strict';

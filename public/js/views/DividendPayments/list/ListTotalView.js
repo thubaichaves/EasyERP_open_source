@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/DividendPayments/list/ListTotal.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendPayments/list/ListTotal.html',
     'helpers'
 ], function (Backbone, $, _, listTemplate, helpers) {
     var supplierPaymentsListTotalView = Backbone.View.extend({

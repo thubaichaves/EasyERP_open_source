@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/vacationDashboard/rowTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/vacationDashboard/rowTemplate.html'
 ], function (Backbone, _, mainTemplate) {
     var View = Backbone.View.extend({
         el: '#dashboardBody',

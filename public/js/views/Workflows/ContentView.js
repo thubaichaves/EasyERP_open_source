@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Workflows/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Workflows/list/ListTemplate.html',
     'views/Workflows/list/ListItemView',
     'collections/RelatedStatuses/RelatedStatusesCollection',
     'custom',

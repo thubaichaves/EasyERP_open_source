@@ -3,7 +3,7 @@ define([
     'Underscore',
     'jQuery',
     'views/dialogViewBase',
-    'text!templates/PayrollExpenses/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/PayrollExpenses/EditTemplate.html',
     'views/PayrollExpenses/form/dialogView',
     'helpers'
 ], function (Backbone, _, $, Parent, template, ReportView, helpers) {

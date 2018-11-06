@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Departments/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Departments/EditTemplate.html',
     'views/selectView/selectView',
     'collections/Departments/DepartmentsCollection',
     'collections/Customers/AccountsDdCollection',

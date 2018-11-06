@@ -5,8 +5,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Products/ProductItemsList.html',
-    'text!templates/Products/ProductInputContent.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/ProductItemsList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/ProductInputContent.html',
     'collections/Products/products',
     'populate',
     'helpers'

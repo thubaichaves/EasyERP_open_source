@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/purchaseInvoices/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/purchaseInvoices/TopBarTemplate.html',
     'custom',
     'common',
     'constants'

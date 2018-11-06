@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Degrees/list/ListTemplate.html',
-    'text!templates/Degrees/form/FormTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Degrees/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Degrees/form/FormTemplate.html',
     'custom'
 ], function (Backbone, $, _, ListTemplate, FormTemplate, Custom) {
     'use strict';

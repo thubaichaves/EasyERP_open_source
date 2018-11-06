@@ -4,7 +4,7 @@ define([
     'Underscore',
     'views/Companies/filterView',
     'models/CompaniesModel',
-    'text!templates/Companies/formPropertyTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Companies/formPropertyTemplate.html'
 ], function (Backbone, $, _, FilterView, CompaniesModel, propertyTemplate) {
     'use strict';
 

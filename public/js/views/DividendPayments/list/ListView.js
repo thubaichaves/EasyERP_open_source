@@ -1,8 +1,8 @@
 define([
     'jQuery',
     'Underscore',
-    'text!templates/DividendPayments/list/ListTemplate.html',
-    'text!templates/DividendPayments/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendPayments/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendPayments/list/ListHeader.html',
     'views/supplierPayments/CreateView',
     'models/PaymentModel',
     'views/DividendPayments/list/ListItemView',

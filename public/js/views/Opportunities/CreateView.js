@@ -3,7 +3,7 @@ define([
     'Underscore',
     'jQuery',
     'views/dialogViewBase',
-    'text!templates/Opportunities/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Opportunities/CreateTemplate.html',
     'models/OpportunitiesModel',
     'common',
     'populate',

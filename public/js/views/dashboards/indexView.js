@@ -8,7 +8,7 @@ define([
     'views/guideTours/listView',
     'views/guideTours/guideNotificationView',
     'dataService',
-    'text!templates/dashboards/index.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/index.html'
 ], function (Backbone, $, _, Parent, CreateView, EditView, GuideTours, GuideNotify, dataService, mainTemplate) {
     'use strict';
 

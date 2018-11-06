@@ -5,7 +5,7 @@ define([
     'views/listViewBase',
     'views/manufacturingOrders/list/ListItemView',
     'views/manufacturingOrders/CreateView',
-    'text!templates/manufacturingOrders/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/manufacturingOrders/list/ListTemplate.html',
     'constants',
     'dataService'
 ], function (Backbone, _, $, Parent, ListItemView, CreateView, ListTemplate, CONSTANTS, dataService) {

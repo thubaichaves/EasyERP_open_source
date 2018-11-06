@@ -1358,7 +1358,7 @@ var User = function (event, models) {
                     delete result.savedFilters;
                 }
 
-                res.status(200).send({user: result, savedFilters: savedFilters});
+                res.status(200).send({user: _.assign({lang: 'ptbr'}, result), savedFilters: savedFilters});
             });
     };
 

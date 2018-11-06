@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/settingsOverview/Accounting/accountsCategories/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/accountsCategories/EditTemplate.html',
     'views/selectView/selectView',
     'populate',
     'constants',

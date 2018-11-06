@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/Accounting/PaymentTermsList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/PaymentTermsList.html',
     'views/Accounting/paymentTerms/paymentTermsEdit',
     'views/Accounting/paymentTerms/paymentTermsCreate'
 

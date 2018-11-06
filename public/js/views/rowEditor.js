@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/rowEditor.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/rowEditor.html',
     'populate'
 ], function (Backbone, _, rowHtml, populate) {
     var View = Backbone.View.extend({

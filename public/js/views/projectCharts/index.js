@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'd3',
-    'text!templates/projectCharts/index.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/projectCharts/index.html',
     'helpers'
 ], function (Backbone, $, _, d3, mainTemplate, helpers) {
     'use strict';

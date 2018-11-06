@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/currency/CreateCurrency.html',
-    'text!templates/settingsOverview/Accounting/currency/currencyEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/currency/CreateCurrency.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/currency/currencyEl.html',
     'models/currency',
     'populate'
 ], function (Backbone, $, _, Parent, template, tableEL, Model, populate) {

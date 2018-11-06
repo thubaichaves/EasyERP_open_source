@@ -1,7 +1,7 @@
 define([
     'jQuery',
     'dataService',
-    'text!templates/helpers/select'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/helpers/select'
 ], function ($, dataService, selectTemplate) {
     var showSelect = function (e, options) {
         var $targetEl = $(e.target);

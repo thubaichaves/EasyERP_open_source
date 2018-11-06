@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Quotations/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Quotations/EditTemplate.html',
     'views/dialogViewBase',
     'views/Assignees/AssigneesView',
     'views/Products/InvoiceOrder/ProductItems',

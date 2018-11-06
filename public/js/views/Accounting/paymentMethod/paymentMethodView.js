@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/Accounting/PaymentMethodList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/PaymentMethodList.html',
     'views/Accounting/paymentMethod/paymentMethodEdit',
     'views/Accounting/paymentMethod/paymentMethodCreate'
 ], function (Backbone, _, $, PaymentMethodList, RditView, CreateView) {

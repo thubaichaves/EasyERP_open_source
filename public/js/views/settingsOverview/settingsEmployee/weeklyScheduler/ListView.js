@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/settingsOverview/settingsEmployee/weeklyScheduler/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/weeklyScheduler/ListTemplate.html',
     'views/settingsOverview/settingsEmployee/weeklyScheduler/EditView',
     'views/settingsOverview/settingsEmployee/weeklyScheduler/CreateView',
     'helpers/ga',

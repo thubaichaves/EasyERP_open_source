@@ -2,7 +2,7 @@ define(['Backbone',
     'Underscore',
     'jQuery',
     'views/topBarViewBase',
-    'text!templates/manufacturingOrders/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/manufacturingOrders/TopBarTemplate.html',
     'constants'
 ], function (Backbone, _, $, Parent, TopBarTemplate, CONSTANTS) {
 

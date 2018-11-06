@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/Users/TopBarTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Users/TopBarTemplate.html'
 ], function (_, BaseView, TopBarTemplate) {
     'use strict';
     var TopBarView = BaseView.extend({

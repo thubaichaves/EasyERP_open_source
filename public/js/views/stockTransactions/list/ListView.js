@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/stockTransactions/list/listHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stockTransactions/list/listHeader.html',
     'views/stockTransactions/CreateView',
     'views/stockTransactions/list/ListItemView',
     'models/stockTransactionModel',

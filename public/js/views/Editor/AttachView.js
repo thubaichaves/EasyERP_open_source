@@ -2,8 +2,8 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Editor/AttachTemplate.html',
-    'text!templates/Editor/AttachDocTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Editor/AttachTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Editor/AttachDocTemplate.html',
     'moment'
 ], function (Backbone, $, _, AttachTemplate, AttachDocTemplate, moment) {
     var AttachView = Backbone.View.extend({

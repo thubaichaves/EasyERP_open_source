@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/ExpensesPayments/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ExpensesPayments/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, _, PaymentListTemplate, helpers) {
     'use strict';

@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/reports/inventoryReports/IndexTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reports/inventoryReports/IndexTemplate.html',
     'collections/reports/filterCollection',
     'views/reports/inventoryReports/IncomingStock',
     'views/reports/inventoryReports/ScarceProducts',

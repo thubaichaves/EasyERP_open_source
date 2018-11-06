@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/productType/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/productType/CreateTemplate.html',
     'views/dialogViewBase',
     'models/ProductTypeModel',
     'common',

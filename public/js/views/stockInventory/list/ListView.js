@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/stockInventory/list/listHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/stockInventory/list/listHeader.html',
     'views/stockInventory/list/ListItemView',
     'views/stockInventory/list/ListTotalView',
     'views/stockInventory/ReceiveView',

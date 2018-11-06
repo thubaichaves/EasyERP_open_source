@@ -6,7 +6,7 @@ define([
     'models/OptionsValuesModel',
     'collections/productSettings/optionValuesCollection',
     'collections/productType/filterCollection',
-    'text!templates/settingsOverview/productDetails/productOptions/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/productDetails/productOptions/EditTemplate.html',
     'constants',
     'dataService'
 ], function (Backbone, _, $, Parent, OptionsValuesModel, OptionValuesCollection, ProductTypeCollection, OptionsFormTemplate, CONSTANTS, dataService) {

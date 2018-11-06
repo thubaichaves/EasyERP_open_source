@@ -1,8 +1,8 @@
 define([
     'jQuery',
     'Underscore',
-    'text!templates/Pagination/PaginationTemplate.html',
-    'text!templates/ExpensesPayments/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Pagination/PaginationTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ExpensesPayments/list/ListHeader.html',
     'views/customerPayments/EditView',
     'models/PaymentModel',
     'views/ExpensesPayments/list/ListItemView',
@@ -87,7 +87,7 @@ define([
                 cellSpan: 3,
                 wTrack  : true
             }).render());
-            
+
             $currentEl.append("<div id='timeRecivingDataFromServer'>Created in " + (new Date() - this.startTime) + 'ms</div>');
         }
     });

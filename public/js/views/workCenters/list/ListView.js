@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/workCenters/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/workCenters/list/ListHeader.html',
     'views/workCenters/list/ListItemView',
     'views/workCenters/CreateView',
     'views/workCenters/EditView',

@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/settingsOverview/settingsEmployee/scheduledPay/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/scheduledPay/ListTemplate.html',
     'views/settingsOverview/settingsEmployee/scheduledPay/EditView',
     'views/settingsOverview/settingsEmployee/scheduledPay/CreateView',
     'helpers/ga',

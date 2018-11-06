@@ -2,7 +2,7 @@ define([
     'Underscore',
     'jQuery',
     'views/invoice/list/ListView',
-    'text!templates/Projects/projectInfo/invoiceTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/invoiceTemplate.html',
     'views/invoice/EditView',
     'views/invoice/list/ListItemView',
     'collections/invoice/filterCollection',

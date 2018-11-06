@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/DividendInvoice/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/DividendInvoice/list/ListHeader.html',
     'views/DividendInvoice/CreateView',
     'views/DividendInvoice/EditView',
     'models/InvoicesModel',

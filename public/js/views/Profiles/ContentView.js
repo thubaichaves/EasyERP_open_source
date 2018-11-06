@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Profiles/ProfileListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Profiles/ProfileListTemplate.html',
     'views/Profiles/CreateView'
 ], function (Backbone, $, _, ProfileListTemplate, CreateView) {
     'use strict';

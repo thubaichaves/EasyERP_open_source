@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/Holiday/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Holiday/CreateTemplate.html',
     'common'
 ], function (Backbone, _, CreateTemplate, common) {
     'use strict';

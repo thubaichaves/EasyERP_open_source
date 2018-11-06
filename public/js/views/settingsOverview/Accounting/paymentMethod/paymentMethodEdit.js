@@ -3,8 +3,8 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/Accounting/paymentMethod/EditPaymentMethods.html',
-    'text!templates/settingsOverview/Accounting/paymentMethod/paymentMethodEl.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/paymentMethod/EditPaymentMethods.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/Accounting/paymentMethod/paymentMethodEl.html',
     'populate',
     'constants'
 ], function (Backbone, $, _, Parent, EditTemplate, tableEL, populate, CONSTANTS) {

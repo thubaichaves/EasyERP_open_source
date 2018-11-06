@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/cashTransfer/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/cashTransfer/list/ListHeader.html',
     'views/cashTransfer/CreateView',
     'views/cashTransfer/list/ListItemView',
     'models/cashTransferModel',

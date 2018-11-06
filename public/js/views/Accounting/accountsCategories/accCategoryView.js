@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'jQuery',
-    'text!templates/Accounting/accountsCategories/CategoriesList.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Accounting/accountsCategories/CategoriesList.html',
     'views/Accounting/accountsCategories/accCategoryEdit',
     'views/Accounting/accountsCategories/accCategoryCreate'
 ], function (Backbone, _, $, Template, EditView, CreateView) {

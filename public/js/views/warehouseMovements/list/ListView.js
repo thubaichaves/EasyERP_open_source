@@ -4,7 +4,7 @@ define([
     'Underscore',
     'models/CustomReportsModel',
     'views/listViewBase',
-    'text!templates/warehouseMovements/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/warehouseMovements/list/ListHeader.html',
     'views/warehouseMovements/list/ListItemView',
 ], function (Backbone,
              $,

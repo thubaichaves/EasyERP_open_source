@@ -1,7 +1,7 @@
 ﻿define([
     'jQuery',
     'Underscore',
-    'text!templates/Employees/thumbnails/ThumbnailsItemTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Employees/thumbnails/ThumbnailsItemTemplate.html',
     'views/thumbnailsViewBase',
     'views/Employees/EditView',
     'views/Employees/CreateView',

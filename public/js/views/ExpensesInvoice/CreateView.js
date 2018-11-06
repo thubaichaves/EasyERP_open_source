@@ -3,7 +3,7 @@ define([
     'Underscore',
     'Backbone',
     'views/dialogViewBase',
-    'text!templates/ExpensesInvoice/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ExpensesInvoice/CreateTemplate.html',
     'views/Notes/AttachView',
     'models/InvoiceModel',
     'common',

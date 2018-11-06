@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Notes/NoteTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Notes/NoteTemplate.html',
     'views/Notes/AttachView'
 ], function (Backbone, $, _, NoteTemplate, AttachView) {
     var NoteView = Backbone.View.extend({

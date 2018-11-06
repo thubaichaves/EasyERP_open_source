@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/vacationDashboard/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/vacationDashboard/TopBarTemplate.html',
     'moment',
     'custom'
 ], function (Backbone, $, _, DateFilterView, ContentTopBarTemplate, moment, custom) {

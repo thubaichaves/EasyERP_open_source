@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/profitAndLoss/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/profitAndLoss/list/ListTemplate.html',
     'helpers'
 ], function (Backbone, $, _, listTemplate, helpers) {
     'use strict';

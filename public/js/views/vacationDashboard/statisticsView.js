@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/vacationDashboard/statisticsTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/vacationDashboard/statisticsTemplate.html'
 ], function (Backbone, $, _, statiscticsBlock) {
     var StatisticsView = Backbone.View.extend({
         el        : '#statistics',

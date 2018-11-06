@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/productsSettings/productsSettingsTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/productsSettings/productsSettingsTemplate.html',
     'async',
     'dataService',
     'collections/paymentMethod/paymentMethods',

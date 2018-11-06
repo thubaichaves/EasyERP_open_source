@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/Products/form/VariantsList/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/form/VariantsList/ListHeader.html',
     'views/Products/form/VariantsList/ListItemView',
     'common',
     'constants',

@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/Filter/dateFilter',
-    'text!templates/manualEntry/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/manualEntry/TopBarTemplate.html',
     'custom',
     'constants',
     'dataService',
@@ -14,7 +14,7 @@ define([
     var TopBarView = Backbone.View.extend({
         el           : '#top-bar',
         contentType  : CONSTANTS.MANUALENTRY,
-        contentHeader: 'Manual Entry',
+        contentHeader: 'Entrada Manual',
         template     : _.template(ContentTopBarTemplate),
 
         events: {

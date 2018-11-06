@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/dashboards/customDashboard/CreateChartTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/dashboards/customDashboard/CreateChartTemplate.html',
     'views/dialogViewBase',
     'constants',
     'views/Filter/dateFilter',

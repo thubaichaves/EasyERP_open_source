@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/scheduledPay/EditTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/scheduledPay/EditTemplate.html'
 ], function ($, _, Backbone, CreateTemplate) {
 
     var EditView = Backbone.View.extend({

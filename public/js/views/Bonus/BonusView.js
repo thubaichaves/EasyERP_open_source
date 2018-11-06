@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Bonus/BonusTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Bonus/BonusTemplate.html',
     'views/selectView/selectView',
     'views/Bonus/CreateView',
     'models/BonusModel',

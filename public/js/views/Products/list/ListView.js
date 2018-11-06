@@ -1,15 +1,18 @@
+
+console.log('iniciando');
+console.log(App.currentUser.lang);
 define([
     'Backbone',
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/Products/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Products/list/ListHeader.html',
     'views/Products/CreateView',
     'views/Products/list/ListItemView',
     'views/Products/EditView',
     'views/Products/publishProductView',
     'models/ProductModel',
-    'text!templates/Alpabet/AphabeticTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Alpabet/AphabeticTemplate.html',
     'collections/Products/filterCollection',
     'views/guideTours/guideNotificationView',
     'dataService',

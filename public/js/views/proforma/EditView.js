@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/dialogViewBase',
-    'text!templates/Proforma/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Proforma/EditTemplate.html',
     'views/Assignees/AssigneesView',
     'views/Notes/NoteView',
     'views/Proforma/InvoiceProductItems',

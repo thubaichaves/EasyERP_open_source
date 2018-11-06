@@ -3,8 +3,8 @@ define([
     'Underscore',
     'Backbone',
     'views/dialogViewBase',
-    'text!templates/settingsOverview/settingsEmployee/payrollStructureTypes/structureElement/CreateTemplate.html',
-    'text!templates/settingsOverview/settingsEmployee/payrollStructureTypes/structureElement/FormulaElementTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/payrollStructureTypes/structureElement/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/payrollStructureTypes/structureElement/FormulaElementTemplate.html',
     'models/PayrollComponentTypeModel',
     'common',
     'populate'

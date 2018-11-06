@@ -2,7 +2,7 @@ define([
     'Backbone',
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/reports/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/reports/TopBarTemplate.html',
     'constants',
     'common',
     'custom'

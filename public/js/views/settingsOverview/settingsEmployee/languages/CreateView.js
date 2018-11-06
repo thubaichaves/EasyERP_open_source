@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/settingsOverview/settingsEmployee/languages/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/settingsOverview/settingsEmployee/languages/CreateTemplate.html',
     'models/LanguagesModel',
     'helpers/ga'
 ], function ($, _, Backbone, CreateTemplate, LanguagesModel, ga) {

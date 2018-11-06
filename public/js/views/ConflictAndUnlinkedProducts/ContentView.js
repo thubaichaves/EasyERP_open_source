@@ -2,7 +2,7 @@ define([
     'jquery',
     'underscore',
     'Backbone',
-    'text!templates/ConflictAndUnlinkedProducts/conflictAndUnlinkedTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/ConflictAndUnlinkedProducts/conflictAndUnlinkedTemplate.html',
     'views/ConflictAndUnlinkedProducts/resolveConflicts/ContentView',
     'views/ConflictAndUnlinkedProducts/integrationUnlinkedProducts/list/ListView',
     'views/ConflictAndUnlinkedProducts/resolveConflicts/TopBarView',

@@ -2,13 +2,13 @@ define([
     'jQuery',
     'Underscore',
     'views/topBarViewBase',
-    'text!templates/productType/TopBarTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/productType/TopBarTemplate.html',
     'constants'
 ], function ($, _, TopBarBase, ContentTopBarTemplate, CONSTANTS) {
     var TopBarView = TopBarBase.extend({
         el           : '#top-bar',
         contentType  : CONSTANTS.PRODUCTTYPE,
-        contentHeader: 'Product Types',
+        contentHeader: 'Tipos de Produto',
         template     : _.template(ContentTopBarTemplate)
     });
 

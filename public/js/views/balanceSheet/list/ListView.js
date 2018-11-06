@@ -3,7 +3,7 @@ define([
     'jQuery',
     'Underscore',
     'views/listViewBase',
-    'text!templates/balanceSheet/list/ListHeader.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/balanceSheet/list/ListHeader.html',
     'views/balanceSheet/list/ListItemView',
     'views/Filter/filterView',
     'views/journalEntry/ViewSource',

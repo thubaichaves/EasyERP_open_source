@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'views/customerPayments/list/ListView',
-    'text!templates/Projects/projectInfo/paymentTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Projects/projectInfo/paymentTemplate.html',
     'views/customerPayments/list/ListItemView',
     'views/customerPayments/EditView',
     'collections/customerPayments/filterCollection',

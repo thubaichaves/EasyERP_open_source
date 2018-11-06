@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/goodsOutNotes/EmailTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/goodsOutNotes/EmailTemplate.html',
     'common',
     'populate',
     'dataService'

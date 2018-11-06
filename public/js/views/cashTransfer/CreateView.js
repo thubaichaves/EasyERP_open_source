@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/cashTransfer/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/cashTransfer/CreateTemplate.html',
     'models/cashTransferModel',
     'common',
     'populate',

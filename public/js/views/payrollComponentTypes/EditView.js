@@ -2,7 +2,7 @@ define([
     'jQuery',
     'Underscore',
     'Backbone',
-    'text!templates/payrollComponentTypes/EditTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/payrollComponentTypes/EditTemplate.html',
     'models/PayrollComponentTypeModel'
 ], function ($, _, Backbone, EditTemplate) {
 

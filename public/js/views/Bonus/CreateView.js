@@ -2,7 +2,7 @@ define([
     'Backbone',
     'jQuery',
     'Underscore',
-    'text!templates/Bonus/CreateTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/Bonus/CreateTemplate.html',
     'models/BonusModel'
 ], function (Backbone, $, _, CreateTemplate, CurrentModel) {
     'use strict';

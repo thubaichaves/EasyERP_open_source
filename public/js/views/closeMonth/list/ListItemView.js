@@ -1,7 +1,7 @@
 define([
     'Backbone',
     'Underscore',
-    'text!templates/closeMonth/list/ListTemplate.html',
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/closeMonth/list/ListTemplate.html',
     'moment'
 ], function (Backbone, _, listTemplate, moment) {
     var ListItemView = Backbone.View.extend({

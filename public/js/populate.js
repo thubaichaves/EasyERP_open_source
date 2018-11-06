@@ -1,7 +1,7 @@
 define([
     'Underscore',
     'dataService',
-    'text!templates/main/selectTemplate.html'
+    'text!'+ (function(){try{return App.currentUser.lang;}catch{};return '';})() +'templates/main/selectTemplate.html'
 ], function (_, dataService, selectTemplate) {
     var get = function (id, url, data, field, content, isCreate, canBeEmpty, parrrentContentId, defaultId, $parentContainer, setAccount) {
         defaultId = defaultId || 0;
