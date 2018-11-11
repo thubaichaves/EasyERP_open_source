@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var TasHandler = require('../handlers/tasSettings');
-var authStackMiddleware = require('../helpers/checkAuth');
+//var authStackMiddleware = require('../helpers/checkAuth');
 var MODULES = require('../constants/modules');
 
 module.exports = function (models, event) {

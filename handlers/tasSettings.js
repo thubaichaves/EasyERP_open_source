@@ -16,7 +16,7 @@ var Module = function (models, event) {
             type: Sequelize.STRING
         }
     });*/
-
+    /*
     var conn = mongoose.createConnection('mongodb://localhost:27017/saas');
 
         var contatosSchema_ = new mongoose.Schema({
@@ -28,25 +28,29 @@ var Module = function (models, event) {
         if (!mongoose.Schemas) {
             mongoose.Schemas = {};
         }
-
+    */
 
     this.getAll = function (req, res, next) {
-        /*res.status(200).send({
+        /**/
+        res.status(200).send({
             "startDate": "2018-10-30T12:51:28.110Z",
             "endDate": "2018-10-30T12:51:28.110Z",
             "campgroundId": 455763758
-        });*/
+        });
+        /**/
        /* User.findAll().then(users => {
             res.status(200).send(users);
         })*/
 
-        /*contatos.find({ "NOME": /.*al.*!/i })
+        /** /
+        contatos.find({ "NOME": /.*al.*!/i })
             .select('NOME       ').exec(function (err, result) {
             if (err) {
                 return next(err);
             }
             res.status(200).send({data: result});
-        });*/
+        });
+        /**/
     };
 
     this.getForDd = function (req, res, next) {
