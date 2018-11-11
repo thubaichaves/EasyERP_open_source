@@ -39,15 +39,26 @@ function traduz(d1, d2, langd) {
         }
     });
 }
+function isDirSync(aPath) {
+  try {
+    return fs.statSync(aPath).isDirectory();
+  } catch (e) {
+    if (e.code === 'ENOENT') {
+      return false;
+    } else {
+      throw e;
+    }
+  }
+}
 
 inclone = function (d1, d2, langd) {
     fs.readdir(d1, {withFileTypes: true}, function (err, list) {
         list.forEach(function (value) {
-            if (value.isDirectory()) {
-                clone(d1 + '/' + value.name, d2 + '/' + value.name, langd);
+            if (isDirSync(d1 + '/' + value)) {
+                clone(d1 + '/' + value, d2 + '/' + value, langd);
             }
             else {
-                traduz(d1 + '/' + value.name, d2 + '/' + value.name, langd);
+                traduz(d1 + '/' + value, d2 + '/' + value, langd);
             }
         });
     });

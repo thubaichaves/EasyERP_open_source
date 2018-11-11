@@ -17,7 +17,7 @@ var Module = function (models, event) {
         }
     });*/
 
-    var conn = mongoose.createConnection('mongodb://localhost:27017/nisk');
+    var conn = mongoose.createConnection('mongodb://localhost:27017/saas');
 
         var contatosSchema_ = new mongoose.Schema({
             NOME     : {type: String, default: ''},
